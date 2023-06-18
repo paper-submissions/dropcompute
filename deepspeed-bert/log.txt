@@ -1,0 +1,970 @@
+Created job: sgottlieb-w270-g1-l-tfjob
+sgottlieb-w270-g1-l-tfjob-worker-0 scheduled on node g1-srv26-c01a-kfs
+sgottlieb-w270-g1-l-tfjob-worker-1 scheduled on node g1-srv23-c01a-kfs
+prepare-node	Starting the clone of repo: deepspeed-fork:v1.9.0
+prepare-node	Starting the clone of repo: model_garden:v1.9.0
+environment-populator	jobinformer finished sucessfully
+prepare-node	{"level":"info","msg":"Finished cloning all the repos","service":"repo-cloner","time":"2023-06-12T12:51:31Z"}
+sgottlieb-w270-g1-l-tfjob-worker-0 is running. Starting logs collections...
+tensorflow	+ apt-get update
+tensorflow	Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+tensorflow	Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+tensorflow	Get:3 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,058 kB]
+tensorflow	Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,776 kB]
+tensorflow	Get:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+tensorflow	Get:6 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [2,345 kB]
+tensorflow	Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [28.5 kB]
+tensorflow	Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+tensorflow	Get:9 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+tensorflow	Get:10 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+tensorflow	Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+tensorflow	Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1,275 kB]
+tensorflow	Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,354 kB]
+tensorflow	Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [31.2 kB]
+tensorflow	Get:15 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [2,483 kB]
+tensorflow	Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,255 kB]
+tensorflow	Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+tensorflow	Get:18 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+tensorflow	Fetched 26.8 MB in 4s (6,083 kB/s)
+tensorflow	Reading package lists...
+tensorflow	+ apt-get install -y jq pdsh
+tensorflow	Reading package lists...
+tensorflow	Building dependency tree...
+tensorflow	Reading state information...
+tensorflow	The following additional packages will be installed:
+tensorflow	  genders libgenders0 libjq1 libonig5
+tensorflow	Suggested packages:
+tensorflow	  rdist
+tensorflow	The following NEW packages will be installed:
+tensorflow	  genders jq libgenders0 libjq1 libonig5 pdsh
+tensorflow	0 upgraded, 6 newly installed, 0 to remove and 56 not upgraded.
+tensorflow	Need to get 480 kB of archives.
+tensorflow	After this operation, 1,581 kB of additional disk space will be used.
+tensorflow	Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 libgenders0 amd64 1.22-1build2 [29.2 kB]
+tensorflow	Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 genders amd64 1.22-1build2 [29.7 kB]
+tensorflow	Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 libonig5 amd64 6.9.4-1 [142 kB]
+tensorflow	Get:4 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libjq1 amd64 1.6-1ubuntu0.20.04.1 [121 kB]
+tensorflow	Get:5 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 jq amd64 1.6-1ubuntu0.20.04.1 [50.2 kB]
+tensorflow	Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 pdsh amd64 2.31-3build2 [108 kB]
+tensorflow	Preconfiguring packages ...
+tensorflow	Fetched 480 kB in 1s (378 kB/s)
+tensorflow	Selecting previously unselected package libgenders0:amd64.
+tensorflow	(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 43873 files and directories currently installed.)
+tensorflow	Preparing to unpack .../0-libgenders0_1.22-1build2_amd64.deb ...
+tensorflow	Unpacking libgenders0:amd64 (1.22-1build2) ...
+tensorflow	Selecting previously unselected package genders.
+tensorflow	Preparing to unpack .../1-genders_1.22-1build2_amd64.deb ...
+tensorflow	Unpacking genders (1.22-1build2) ...
+tensorflow	Selecting previously unselected package libonig5:amd64.
+tensorflow	Preparing to unpack .../2-libonig5_6.9.4-1_amd64.deb ...
+tensorflow	Unpacking libonig5:amd64 (6.9.4-1) ...
+tensorflow	Selecting previously unselected package libjq1:amd64.
+tensorflow	Preparing to unpack .../3-libjq1_1.6-1ubuntu0.20.04.1_amd64.deb ...
+tensorflow	Unpacking libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+tensorflow	Selecting previously unselected package jq.
+tensorflow	Preparing to unpack .../4-jq_1.6-1ubuntu0.20.04.1_amd64.deb ...
+tensorflow	Unpacking jq (1.6-1ubuntu0.20.04.1) ...
+tensorflow	Selecting previously unselected package pdsh.
+tensorflow	Preparing to unpack .../5-pdsh_2.31-3build2_amd64.deb ...
+tensorflow	Unpacking pdsh (2.31-3build2) ...
+tensorflow	Setting up libgenders0:amd64 (1.22-1build2) ...
+tensorflow	Setting up genders (1.22-1build2) ...
+tensorflow	Setting up libonig5:amd64 (6.9.4-1) ...
+tensorflow	Setting up libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+tensorflow	Setting up pdsh (2.31-3build2) ...
+tensorflow	Setting up jq (1.6-1ubuntu0.20.04.1) ...
+tensorflow	Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+tensorflow	/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link
+tensorflow	
+tensorflow	/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link
+tensorflow	
+tensorflow	/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link
+tensorflow	
+tensorflow	/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link
+tensorflow	
+tensorflow	/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link
+tensorflow	
+tensorflow	/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link
+tensorflow	
+tensorflow	+ ln -s /mnt/weka/data /data
+tensorflow	+ cd /root/repos/deepspeed-fork
+tensorflow	+ pip install .
+tensorflow	Processing /root/repos/deepspeed-fork
+tensorflow	  Preparing metadata (setup.py): started
+tensorflow	  Preparing metadata (setup.py): finished with status 'done'
+tensorflow	Collecting hjson
+tensorflow	  Downloading hjson-3.1.0-py3-none-any.whl (54 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.0/54.0 kB 554.6 kB/s eta 0:00:00
+tensorflow	Requirement already satisfied: ninja in /usr/local/lib/python3.8/dist-packages (from deepspeed==0.7.7+cb9bb22) (1.10.2)
+tensorflow	Requirement already satisfied: numpy in /usr/local/lib/python3.8/dist-packages (from deepspeed==0.7.7+cb9bb22) (1.23.5)
+tensorflow	Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from deepspeed==0.7.7+cb9bb22) (23.0)
+tensorflow	Collecting psutil
+tensorflow	  Downloading psutil-5.9.5-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (282 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 282.1/282.1 kB 1.9 MB/s eta 0:00:00
+tensorflow	Collecting py-cpuinfo
+tensorflow	  Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+tensorflow	Collecting pydantic
+tensorflow	  Downloading pydantic-1.10.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 13.4 MB/s eta 0:00:00
+tensorflow	Requirement already satisfied: torch in /usr/local/lib/python3.8/dist-packages (from deepspeed==0.7.7+cb9bb22) (1.13.1a0+gita64770b)
+tensorflow	Requirement already satisfied: tqdm in /usr/local/lib/python3.8/dist-packages (from deepspeed==0.7.7+cb9bb22) (4.65.0)
+tensorflow	Requirement already satisfied: typing-extensions>=4.2.0 in /usr/local/lib/python3.8/dist-packages (from pydantic->deepspeed==0.7.7+cb9bb22) (4.5.0)
+tensorflow	Building wheels for collected packages: deepspeed
+tensorflow	  Building wheel for deepspeed (setup.py): started
+tensorflow	  Building wheel for deepspeed (setup.py): finished with status 'done'
+tensorflow	  Created wheel for deepspeed: filename=deepspeed-0.7.7+cb9bb22-py3-none-any.whl size=728080 sha256=aa42a4d7568861c26300019cccc324f75b2016957a4061063fa74959757b9e6c
+tensorflow	  Stored in directory: /tmp/pip-ephem-wheel-cache-zsw_6g07/wheels/3f/3a/cf/83ec02c9e16d72f87fcc8040047e4f61573de6836085690a0c
+tensorflow	Successfully built deepspeed
+tensorflow	Installing collected packages: py-cpuinfo, hjson, pydantic, psutil, deepspeed
+tensorflow	Successfully installed deepspeed-0.7.7+cb9bb22 hjson-3.1.0 psutil-5.9.5 py-cpuinfo-9.0.0 pydantic-1.10.9
+tensorflow	WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+tensorflow	
+tensorflow	[notice] A new release of pip available: 22.3 -> 23.1.2
+tensorflow	[notice] To update, run: python3 -m pip install --upgrade pip
+tensorflow	+ cd /root/repos/model_garden/PyTorch/nlp/pretraining/deepspeed-bert/
+tensorflow	+ pip install -r requirements.txt
+tensorflow	Collecting git+https://github.com/NVIDIA/dllogger.git@26a0f8f1958de2c0c460925ff6102a4d2486d6cc (from -r requirements.txt (line 12))
+tensorflow	  Cloning https://github.com/NVIDIA/dllogger.git (to revision 26a0f8f1958de2c0c460925ff6102a4d2486d6cc) to /tmp/pip-req-build-dh8iksxz
+tensorflow	  Running command git clone --filter=blob:none --quiet https://github.com/NVIDIA/dllogger.git /tmp/pip-req-build-dh8iksxz
+tensorflow	  Running command git rev-parse -q --verify 'sha^26a0f8f1958de2c0c460925ff6102a4d2486d6cc'
+tensorflow	  Running command git fetch -q https://github.com/NVIDIA/dllogger.git 26a0f8f1958de2c0c460925ff6102a4d2486d6cc
+tensorflow	  Running command git checkout -q 26a0f8f1958de2c0c460925ff6102a4d2486d6cc
+tensorflow	  Resolved https://github.com/NVIDIA/dllogger.git to commit 26a0f8f1958de2c0c460925ff6102a4d2486d6cc
+tensorflow	  Preparing metadata (setup.py): started
+tensorflow	  Preparing metadata (setup.py): finished with status 'done'
+tensorflow	Collecting boto3==1.16.57
+tensorflow	  Downloading boto3-1.16.57-py2.py3-none-any.whl (130 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.3/130.3 kB 767.0 kB/s eta 0:00:00
+tensorflow	Collecting ipdb==0.13.9
+tensorflow	  Downloading ipdb-0.13.9.tar.gz (16 kB)
+tensorflow	  Preparing metadata (setup.py): started
+tensorflow	  Preparing metadata (setup.py): finished with status 'done'
+tensorflow	Collecting h5py==2.10.0
+tensorflow	  Downloading h5py-2.10.0-cp38-cp38-manylinux1_x86_64.whl (2.9 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 9.2 MB/s eta 0:00:00
+tensorflow	Collecting html2text==2020.1.16
+tensorflow	  Downloading html2text-2020.1.16-py3-none-any.whl (32 kB)
+tensorflow	Collecting nltk>=3.6.7
+tensorflow	  Downloading nltk-3.8.1-py3-none-any.whl (1.5 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 86.0 MB/s eta 0:00:00
+tensorflow	Collecting progressbar==2.5
+tensorflow	  Downloading progressbar-2.5.tar.gz (10 kB)
+tensorflow	  Preparing metadata (setup.py): started
+tensorflow	  Preparing metadata (setup.py): finished with status 'done'
+tensorflow	Collecting onnxruntime==1.13.1
+tensorflow	  Downloading onnxruntime-1.13.1-cp38-cp38-manylinux_2_27_x86_64.whl (4.5 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 49.7 MB/s eta 0:00:00
+tensorflow	Collecting s3transfer<0.4.0,>=0.3.0
+tensorflow	  Downloading s3transfer-0.3.7-py2.py3-none-any.whl (73 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.4/73.4 kB 310.5 MB/s eta 0:00:00
+tensorflow	Collecting botocore<1.20.0,>=1.19.57
+tensorflow	  Downloading botocore-1.19.63-py2.py3-none-any.whl (7.2 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 46.5 MB/s eta 0:00:00
+tensorflow	Collecting jmespath<1.0.0,>=0.7.1
+tensorflow	  Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+tensorflow	Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from ipdb==0.13.9->-r requirements.txt (line 4)) (67.6.0)
+tensorflow	Collecting ipython>=7.17.0
+tensorflow	  Downloading ipython-8.12.2-py3-none-any.whl (797 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.8/797.8 kB 292.8 MB/s eta 0:00:00
+tensorflow	Collecting toml>=0.10.2
+tensorflow	  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+tensorflow	Collecting decorator
+tensorflow	  Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+tensorflow	Requirement already satisfied: numpy>=1.7 in /usr/local/lib/python3.8/dist-packages (from h5py==2.10.0->-r requirements.txt (line 6)) (1.23.5)
+tensorflow	Requirement already satisfied: six in /usr/local/lib/python3.8/dist-packages (from h5py==2.10.0->-r requirements.txt (line 6)) (1.16.0)
+tensorflow	Collecting coloredlogs
+tensorflow	  Downloading coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 kB 260.5 MB/s eta 0:00:00
+tensorflow	Requirement already satisfied: protobuf in /usr/local/lib/python3.8/dist-packages (from onnxruntime==1.13.1->-r requirements.txt (line 11)) (3.19.5)
+tensorflow	Collecting sympy
+tensorflow	  Downloading sympy-1.12-py3-none-any.whl (5.7 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 65.3 MB/s eta 0:00:00
+tensorflow	Collecting flatbuffers
+tensorflow	  Downloading flatbuffers-23.5.26-py2.py3-none-any.whl (26 kB)
+tensorflow	Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from onnxruntime==1.13.1->-r requirements.txt (line 11)) (23.0)
+tensorflow	Requirement already satisfied: tqdm in /usr/local/lib/python3.8/dist-packages (from nltk>=3.6.7->-r requirements.txt (line 8)) (4.65.0)
+tensorflow	Collecting regex>=2021.8.3
+tensorflow	  Downloading regex-2023.6.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (772 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 772.3/772.3 kB 316.1 MB/s eta 0:00:00
+tensorflow	Collecting click
+tensorflow	  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 336.3 MB/s eta 0:00:00
+tensorflow	Collecting joblib
+tensorflow	  Downloading joblib-1.2.0-py3-none-any.whl (297 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.0/298.0 kB 381.0 MB/s eta 0:00:00
+tensorflow	Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.8/dist-packages (from botocore<1.20.0,>=1.19.57->boto3==1.16.57->-r requirements.txt (line 2)) (2.8.2)
+tensorflow	Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/local/lib/python3.8/dist-packages (from botocore<1.20.0,>=1.19.57->boto3==1.16.57->-r requirements.txt (line 2)) (1.26.15)
+tensorflow	Collecting pexpect>4.3
+tensorflow	  Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.0/59.0 kB 287.6 MB/s eta 0:00:00
+tensorflow	Collecting stack-data
+tensorflow	  Downloading stack_data-0.6.2-py3-none-any.whl (24 kB)
+tensorflow	Collecting traitlets>=5
+tensorflow	  Downloading traitlets-5.9.0-py3-none-any.whl (117 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.4/117.4 kB 346.1 MB/s eta 0:00:00
+tensorflow	Collecting backcall
+tensorflow	  Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+tensorflow	Collecting pygments>=2.4.0
+tensorflow	  Downloading Pygments-2.15.1-py3-none-any.whl (1.1 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 281.5 MB/s eta 0:00:00
+tensorflow	Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from ipython>=7.17.0->ipdb==0.13.9->-r requirements.txt (line 4)) (4.5.0)
+tensorflow	Collecting matplotlib-inline
+tensorflow	  Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+tensorflow	Collecting pickleshare
+tensorflow	  Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+tensorflow	Collecting jedi>=0.16
+tensorflow	  Downloading jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 240.9 MB/s eta 0:00:00
+tensorflow	Collecting prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30
+tensorflow	  Downloading prompt_toolkit-3.0.38-py3-none-any.whl (385 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.8/385.8 kB 366.8 MB/s eta 0:00:00
+tensorflow	Collecting humanfriendly>=9.1
+tensorflow	  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 303.8 MB/s eta 0:00:00
+tensorflow	Collecting mpmath>=0.19
+tensorflow	  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 311.9 MB/s eta 0:00:00
+tensorflow	Collecting parso<0.9.0,>=0.8.0
+tensorflow	  Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+tensorflow	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 337.2 MB/s eta 0:00:00
+tensorflow	Collecting ptyprocess>=0.5
+tensorflow	  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+tensorflow	Collecting wcwidth
+tensorflow	  Downloading wcwidth-0.2.6-py2.py3-none-any.whl (29 kB)
+tensorflow	Collecting executing>=1.2.0
+tensorflow	  Downloading executing-1.2.0-py2.py3-none-any.whl (24 kB)
+tensorflow	Collecting asttokens>=2.1.0
+tensorflow	  Downloading asttokens-2.2.1-py2.py3-none-any.whl (26 kB)
+tensorflow	Collecting pure-eval
+tensorflow	  Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+tensorflow	Building wheels for collected packages: ipdb, progressbar, DLLogger
+tensorflow	  Building wheel for ipdb (setup.py): started
+tensorflow	  Building wheel for ipdb (setup.py): finished with status 'done'
+tensorflow	  Created wheel for ipdb: filename=ipdb-0.13.9-py3-none-any.whl size=11627 sha256=7aa2399feda096f5f4af65f9429ef9a3b375a797fd5ff42f7fc07f85f15e3c2a
+tensorflow	  Stored in directory: /tmp/pip-ephem-wheel-cache-zihi3rln/wheels/a6/1e/5e/875bdebdec6a064decb36d5f6ec4f56ade455997b31084ca3d
+tensorflow	  Building wheel for progressbar (setup.py): started
+tensorflow	  Building wheel for progressbar (setup.py): finished with status 'done'
+tensorflow	  Created wheel for progressbar: filename=progressbar-2.5-py3-none-any.whl size=12067 sha256=ecce71a9389bb3c088fa7e3959960d6a53778bbba5cb3593ec1316fd865b540a
+tensorflow	  Stored in directory: /tmp/pip-ephem-wheel-cache-zihi3rln/wheels/a5/e1/9a/50904cdc7d70e80102eb7596a6345b0a4f6e04fd7dc7feec66
+tensorflow	  Building wheel for DLLogger (setup.py): started
+tensorflow	  Building wheel for DLLogger (setup.py): finished with status 'done'
+tensorflow	  Created wheel for DLLogger: filename=DLLogger-0.1.0-py3-none-any.whl size=5613 sha256=ab93db97fd82e8a08986c8bb1f5f0a31e92b477052729d4b51288f585689878e
+tensorflow	  Stored in directory: /tmp/pip-ephem-wheel-cache-zihi3rln/wheels/07/ac/b9/e8fa6c001e02c4e40a33cd6810bdf0769e304aefbc6c2d7868
+tensorflow	Successfully built ipdb progressbar DLLogger
+tensorflow	Installing collected packages: wcwidth, pure-eval, ptyprocess, progressbar, pickleshare, mpmath, flatbuffers, executing, backcall, traitlets, toml, sympy, regex, pygments, prompt-toolkit, pexpect, parso, joblib, jmespath, humanfriendly, html2text, h5py, DLLogger, decorator, click, asttokens, stack-data, nltk, matplotlib-inline, jedi, coloredlogs, botocore, s3transfer, onnxruntime, ipython, ipdb, boto3
+tensorflow	  Attempting uninstall: regex
+tensorflow	    Found existing installation: regex 2020.10.28
+tensorflow	    Uninstalling regex-2020.10.28:
+tensorflow	      Successfully uninstalled regex-2020.10.28
+tensorflow	Successfully installed DLLogger-0.1.0 asttokens-2.2.1 backcall-0.2.0 boto3-1.16.57 botocore-1.19.63 click-8.1.3 coloredlogs-15.0.1 decorator-5.1.1 executing-1.2.0 flatbuffers-23.5.26 h5py-2.10.0 html2text-2020.1.16 humanfriendly-10.0 ipdb-0.13.9 ipython-8.12.2 jedi-0.18.2 jmespath-0.10.0 joblib-1.2.0 matplotlib-inline-0.1.6 mpmath-1.3.0 nltk-3.8.1 onnxruntime-1.13.1 parso-0.8.3 pexpect-4.8.0 pickleshare-0.7.5 progressbar-2.5 prompt-toolkit-3.0.38 ptyprocess-0.7.0 pure-eval-0.2.2 pygments-2.15.1 regex-2023.6.3 s3transfer-0.3.7 stack-data-0.6.2 sympy-1.12 toml-0.10.2 traitlets-5.9.0 wcwidth-0.2.6
+tensorflow	WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+tensorflow	
+tensorflow	[notice] A new release of pip available: 22.3 -> 23.1.2
+tensorflow	[notice] To update, run: python3 -m pip install --upgrade pip
+tensorflow	+ echo '{"cluster":{"worker":["sgottlieb-w270-g1-l-tfjob-worker-0.habana.svc:2222","sgottlieb-w270-g1-l-tfjob-worker-1.habana.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}'
+tensorflow	{"cluster":{"worker":["sgottlieb-w270-g1-l-tfjob-worker-0.habana.svc:2222","sgottlieb-w270-g1-l-tfjob-worker-1.habana.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}
+tensorflow	+ echo '{"cluster":{"worker":["sgottlieb-w270-g1-l-tfjob-worker-0.habana.svc:2222","sgottlieb-w270-g1-l-tfjob-worker-1.habana.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}'
+tensorflow	+ jq '.cluster.worker[]'
+tensorflow	+ sed 's/\"//g'
+tensorflow	+ sed 's/\..*:2222$/ slots=8/g'
+tensorflow	+ cat ./scripts/hostsfile
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0 slots=8
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1 slots=8
+tensorflow	+ mkdir /root/.ssh
+tensorflow	+ cp /etc/ssh/ssh_host_ecdsa_key /root/.ssh/id_rsa
+tensorflow	+ cp /etc/ssh/ssh_host_ecdsa_key.pub /root/.ssh/id_rsa.pub
+tensorflow	+ cp /etc/ssh/ssh_host_ecdsa_key.pub /root/.ssh/authorized_keys
+tensorflow	+ echo 'Host *'
+tensorflow	+ echo 'ForwardAgent yes'
+tensorflow	+ echo 'StrictHostKeyChecking no'
+tensorflow	+ echo 'UserKnownHostsFile /dev/null'
+tensorflow	+ echo 'LogLevel ERROR'
+tensorflow	+ chmod 600 /root/.ssh/config
+tensorflow	+ env
+tensorflow	KUBERNETES_SERVICE_PORT_HTTPS=443
+tensorflow	HL_VISIBLE_PCI_ADDRESS=0000:db:00.0,0000:61:00.0,0000:63:00.0,0000:64:00.0,0000:60:00.0,0000:dc:00.0,0000:dd:00.0,0000:da:00.0
+tensorflow	GLIBCXX_FORCE_NEW=1
+tensorflow	KUBERNETES_SERVICE_PORT=443
+tensorflow	HOSTNAME=sgottlieb-w270-g1-l-tfjob-worker-0
+tensorflow	LANGUAGE=en_US.UTF-8
+tensorflow	MPICC=/opt/amazon/openmpi/bin/mpicc
+tensorflow	HABANA_LOGS=/root/logs/habana_logs
+tensorflow	FI_EFA_USE_DEVICE_RDMA=1
+tensorflow	HABANA_PLUGINS_LIB_PATH=/opt/habanalabs/habana_plugins
+tensorflow	PWD=/root/repos/model_garden/PyTorch/nlp/pretraining/deepspeed-bert
+tensorflow	RDMAV_FORK_SAFE=1
+tensorflow	HL_VISIBLE_DEVICES_UUID=186,97,98,99,96,187,188,185
+tensorflow	GLIBCPP_FORCE_NEW=1
+tensorflow	TZ=Asia/Jerusalem
+tensorflow	LD_PRELOAD=/lib/x86_64-linux-gnu/libtcmalloc.so.4
+tensorflow	HOME=/root
+tensorflow	LANG=en_US.UTF-8
+tensorflow	HABANA_VISIBLE_DEVICES=2,0,5,7,3,4,6,1
+tensorflow	KUBERNETES_PORT_443_TCP=tcp://10.233.0.1:443
+tensorflow	OS_NUMBER=2004
+tensorflow	PCIDEVICE_INTEL_COM_MLX5_NETDEVICE=0000:18:03.4
+tensorflow	TF_CONFIG={"cluster":{"worker":["sgottlieb-w270-g1-l-tfjob-worker-0.habana.svc:2222","sgottlieb-w270-g1-l-tfjob-worker-1.habana.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}
+tensorflow	JOB_NAME=sgottlieb-w270-g1-l-tfjob
+tensorflow	PIP_DEFAULT_TIMEOUT=1000
+tensorflow	GC_KERNEL_PATH=/usr/lib/habanalabs/libtpc_kernels.so
+tensorflow	PYTHONPATH=/root:/usr/lib/habanalabs/
+tensorflow	MPI_ROOT=/opt/amazon/openmpi
+tensorflow	WORKER_NAME=sgottlieb-w270-g1-l-tfjob-worker-0
+tensorflow	SHLVL=1
+tensorflow	KUBERNETES_PORT_443_TCP_PROTO=tcp
+tensorflow	HL_VISIBLE_DEVICES=/dev/hl2,/dev/hl_controlD2,/dev/accel/accel2,/dev/accel/accel_controlD2,/dev/hl0,/dev/hl_controlD0,/dev/accel/accel0,/dev/accel/accel_controlD0,/dev/hl5,/dev/hl_controlD5,/dev/accel/accel5,/dev/accel/accel_controlD5,/dev/hl7,/dev/hl_controlD7,/dev/accel/accel7,/dev/accel/accel_controlD7,/dev/hl3,/dev/hl_controlD3,/dev/accel/accel3,/dev/accel/accel_controlD3,/dev/hl4,/dev/hl_controlD4,/dev/accel/accel4,/dev/accel/accel_controlD4,/dev/hl6,/dev/hl_controlD6,/dev/accel/accel6,/dev/accel/accel_controlD6,/dev/hl1,/dev/hl_controlD1,/dev/accel/accel1,/dev/accel/accel_controlD1
+tensorflow	KUBERNETES_PORT_443_TCP_ADDR=10.233.0.1
+tensorflow	HABANA_SCAL_BIN_PATH=/opt/habanalabs/engines_fw
+tensorflow	LD_LIBRARY_PATH=/opt/amazon/openmpi/lib:/opt/amazon/efa/lib:/usr/lib/habanalabs:
+tensorflow	LC_CTYPE=en_US.UTF-8
+tensorflow	TCMALLOC_LARGE_ALLOC_REPORT_THRESHOLD=7516192768
+tensorflow	OPAL_PREFIX=/opt/amazon/openmpi
+tensorflow	KUBERNETES_SERVICE_HOST=10.233.0.1
+tensorflow	LC_ALL=en_US.UTF-8
+tensorflow	KUBERNETES_PORT=tcp://10.233.0.1:443
+tensorflow	KUBERNETES_PORT_443_TCP_PORT=443
+tensorflow	PATH=/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+tensorflow	PIP_NO_CACHE_DIR=on
+tensorflow	DEBIAN_FRONTEND=noninteractive
+tensorflow	KUBERNETES_NODENAME=g1-srv26-c01a-kfs
+tensorflow	_=/usr/bin/env
+tensorflow	OLDPWD=/root/repos/deepspeed-fork
+tensorflow	+ /etc/init.d/ssh start
+tensorflow	 * Starting OpenBSD Secure Shell server sshd
+tensorflow	   ...done.
+tensorflow	+ sleep 60
+tensorflow	+ mkdir /root/logs/sgottlieb-w270-g1-l-tfjob-worker-0
+tensorflow	mkdir: cannot create directory ‘/root/logs/sgottlieb-w270-g1-l-tfjob-worker-0’: File exists
+tensorflow	+ dmesg -HwT --follow
+tensorflow	++ grep -n sgottlieb-w270-g1-l-tfjob-worker-0 ./scripts/hostsfile
+tensorflow	++ cut -f1 -d:
+tensorflow	+ '[' 1 -ne 1 ']'
+tensorflow	+ cp ./scripts/hostsfile /software/users/sgottlieb/dist_work_new_min/hostsfile
+tensorflow	+ cd /software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert
+tensorflow	+ ./run_deepspeed_bert_1.5b.sh 192 16 -2
+tensorflow	MASTER_ADDR - sgottlieb-w270-g1-l-tfjob-worker-0
+tensorflow	#################################################
+tensorflow	MODEL: Bert-1.5B NODES_NUMBER: 2 BATCH: 3072 GRAD_ACCUMULATION: 12 COMPUTE_THRESHOLD: -2
+tensorflow	Experiment directory - runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54
+tensorflow	python -u /software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/run_pretraining.py --use_hpu --disable_progress_bar --optimizer=lans --use_lr_scheduler --resume_from_checkpoint --do_train --bert_model=bert-base-uncased --config_file=/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/scripts/bert_1.5b_config.json --json-summary=runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54/dllogger.json --output_dir=runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54/checkpoints --seed=12439 --input_dir=/software/data/pytorch/bert_pretraining/hdf5_lower_case_1_seq_len_128_max_pred_20_masked_lm_prob_0.15_random_seed_12345_dupe_factor_5/books_wiki_en_corpus --max_seq_length 128 --max_predictions_per_seq=80 --max_steps=200 --steps_this_run=-1 --num_steps_per_checkpoint=200 --learning_rate=0.0015 --warmup_proportion=0.05 --constant_proportion=0.25 --scheduler_degree=1.0 --log_freq=1 --tensor_logger_path=runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54 --deepspeed --compute_threshold=-2 --skip_checkpoint --deepspeed_config=/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/scripts/temp_config.json --delay_factor=1.0
+tensorflow	[2023-06-12 15:54:29,639] [INFO] [multinode_runner.py:65:get_cmd] Running on the following workers: sgottlieb-w270-g1-l-tfjob-worker-0,sgottlieb-w270-g1-l-tfjob-worker-1
+tensorflow	[2023-06-12 15:54:29,639] [INFO] [runner.py:539:main] cmd = pdsh -S -f 1024 -w sgottlieb-w270-g1-l-tfjob-worker-0,sgottlieb-w270-g1-l-tfjob-worker-1 export PYTHONPATH=/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert:/root:/usr/lib/habanalabs/; export DEEPSPEED_USE_HPU=true; export PT_HPU_LAZY_ACC_PAR_MODE=0; export PT_HPU_ENABLE_REFINE_DYNAMIC_SHAPES=0;  cd /software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert; /usr/bin/python3 -u -m deepspeed.launcher.launch --world_info=eyJzZ290dGxpZWItdzI3MC1nMS1sLXRmam9iLXdvcmtlci0wIjogWzAsIDEsIDIsIDMsIDQsIDUsIDYsIDddLCAic2dvdHRsaWViLXcyNzAtZzEtbC10ZmpvYi13b3JrZXItMSI6IFswLCAxLCAyLCAzLCA0LCA1LCA2LCA3XX0= --node_rank=%n --master_addr=sgottlieb-w270-g1-l-tfjob-worker-0 --master_port=29500 --no_python --no_local_rank python -u '/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/run_pretraining.py' --use_hpu --disable_progress_bar --optimizer=lans --use_lr_scheduler --resume_from_checkpoint --do_train --bert_model=bert-base-uncased --config_file=/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/scripts/bert_1.5b_config.json --json-summary=runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54/dllogger.json --output_dir=runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54/checkpoints --seed=12439 --input_dir=/software/data/pytorch/bert_pretraining/hdf5_lower_case_1_seq_len_128_max_pred_20_masked_lm_prob_0.15_random_seed_12345_dupe_factor_5/books_wiki_en_corpus --max_seq_length '128' --max_predictions_per_seq=80 --max_steps=200 --steps_this_run=-1 --num_steps_per_checkpoint=200 --learning_rate=0.0015 --warmup_proportion=0.05 --constant_proportion=0.25 --scheduler_degree=1.0 --log_freq=1 --tensor_logger_path=runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54 --deepspeed --compute_threshold=-2 --skip_checkpoint --deepspeed_config=/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/scripts/temp_config.json --delay_factor=1.0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  * Starting OpenBSD Secure Shell server sshd
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:    ...done.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1:  * Starting OpenBSD Secure Shell server sshd
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1:    ...done.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:54:31,630] [INFO] [launch.py:145:main] WORLD INFO DICT: {'sgottlieb-w270-g1-l-tfjob-worker-0': [0, 1, 2, 3, 4, 5, 6, 7], 'sgottlieb-w270-g1-l-tfjob-worker-1': [0, 1, 2, 3, 4, 5, 6, 7]}
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:54:31,630] [INFO] [launch.py:151:main] nnodes=2, num_local_procs=8, node_rank=0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:54:31,630] [INFO] [launch.py:164:main] global_rank_mapping=defaultdict(<class 'list'>, {'sgottlieb-w270-g1-l-tfjob-worker-0': [0, 1, 2, 3, 4, 5, 6, 7], 'sgottlieb-w270-g1-l-tfjob-worker-1': [8, 9, 10, 11, 12, 13, 14, 15]})
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:54:31,630] [INFO] [launch.py:165:main] dist_world_size=16
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 15:54:31,822] [INFO] [launch.py:145:main] WORLD INFO DICT: {'sgottlieb-w270-g1-l-tfjob-worker-0': [0, 1, 2, 3, 4, 5, 6, 7], 'sgottlieb-w270-g1-l-tfjob-worker-1': [0, 1, 2, 3, 4, 5, 6, 7]}
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 15:54:31,822] [INFO] [launch.py:151:main] nnodes=2, num_local_procs=8, node_rank=1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 15:54:31,822] [INFO] [launch.py:164:main] global_rank_mapping=defaultdict(<class 'list'>, {'sgottlieb-w270-g1-l-tfjob-worker-0': [0, 1, 2, 3, 4, 5, 6, 7], 'sgottlieb-w270-g1-l-tfjob-worker-1': [8, 9, 10, 11, 12, 13, 14, 15]})
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 15:54:31,822] [INFO] [launch.py:165:main] dist_world_size=16
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=5
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=2
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=7
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=4
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:54:33,856] [INFO] [comm.py:679:init_distributed] Initializing TorchBackend in DeepSpeed with backend hccl
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=3
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Distributed training with backend=hccl, device=hpu, local_rank=6
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=7Distributed training with backend=hccl, device=hpu, local_rank=4
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=6
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=5
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=3
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Distributed training with backend=hccl, device=hpu, local_rank=2
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 15:54:34.863821 - PARAMETER Config : ["Namespace(bert_5b=False, bert_model='bert-base-uncased', betas=None, bfloat16_enabled=True, checkpoint_activations=False, checkpoint_activations_interval=1, checkpoint_dir=None, compute_threshold=-2.0, config_file='/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/scripts/bert_1.5b_config.json', constant_proportion=0.25, debug=False, deepscale=False, deepscale_config=None, deepspeed=True, deepspeed_config='/software/users/sgottlieb/dist_work_new_min/DropCompute/deepspeed-bert/scripts/temp_config.json', deepspeed_mpi=False, delay_factor=1.0, disable_progress_bar=True, disable_random_sampler=False, do_train=True, init_loss_scale=1048576, input_dir='/software/data/pytorch/bert_pretraining/hdf5_lower_case_1_seq_len_128_max_pred_20_masked_lm_prob_0.15_random_seed_12345_dupe_factor_5/books_wiki_en_corpus', json_summary='runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54/dllogger.json', learning_rate=0.0015, local_rank=0, log_bwd_grads=False, log_freq=1.0, log_fwd_activations=False, log_model_inputs=False, loss_scale=0.0, max_predictions_per_seq=80, max_seq_length=128, max_steps=200.0, no_cuda=False, num_steps_per_checkpoint=200, num_train_epochs=3.0, optimizer='lans', output_dir='runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54/checkpoints', phase1_end_step=7038, phase2=False, profile=None, profile_steps='2,3', rank=0, resume_from_checkpoint=True, resume_step=-1, run_loss_in_fp32=False, scheduler_degree=1.0, seed=12439, skip_checkpoint=True, steps_this_run=200.0, tensor_logger_max_iterations=0, tensor_logger_path='runs_deepspeed/n_16_b_192_acc_12_drop_-2_hpu-1_12-06-23_15-54', use_ds_lamb_bias_correction=False, use_env=False, use_hpu=True, use_lr_scheduler=True, warmup_proportion=0.05, world_size=16, zero_optimization=True)"] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: =============================HABANA PT BRIDGE CONFIGURATION =========================== 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_LAZY_MODE = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_LAZY_EAGER_OPTIM_CACHE = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_COMPILE_THREAD = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_EXECUTION_THREAD = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_LAZY_EAGER_EXECUTION_THREAD = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_ENABLE_INTER_HOST_CACHING = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_ENABLE_INFERENCE_MODE = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_ENABLE_HABANA_CACHING = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_MAX_RECIPE_SUBMISSION_LIMIT = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_MAX_COMPOUND_OP_SIZE = 9223372036854775807
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_MAX_COMPOUND_OP_SIZE_SS = 10
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_STAGE_SUBMISSION = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_STAGE_SUBMISSION_MODE = 2
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_PGM_ENABLE_CACHE = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_LAZY_COLLECTIVES = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HCCL_SLICE_SIZE_MB = 16
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HCCL_MEMORY_ALLOWANCE_MB = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_INITIAL_WORKSPACE_SIZE = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HABANA_POOL_SIZE = 24
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_POOL_STRATEGY = 5
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_POOL_LOG_FRAGMENTATION_INFO = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_ENABLE_MEMORY_DEFRAGMENTATION = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_ENABLE_DEFRAGMENTATION_INFO = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_SYNAPSE_LAYOUT_HANDLING = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_SYNAPSE_OUTPUT_PERMUTE = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_VALID_DATA_RANGE_CHECK = 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_FORCE_USE_DEFAULT_STREAM = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_RECIPE_CACHE_PATH = 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_ENABLE_REFINE_DYNAMIC_SHAPES = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_DYNAMIC_MIN_POLICY_ORDER = 4,5,3,1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_DYNAMIC_MAX_POLICY_ORDER = 2,4,5,3,1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_LAZY_ACC_PAR_MODE = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_CLUSTERED_PROGRAM = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_CLUSTERED_PROGRAM_ENFORCE = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_CLUSTERED_PROGRAM_SPLIT_STR = default
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_CLUSTERED_PROGRAM_SCHED_STR = default
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:  PT_HPU_EAGER_OPS = 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: =============================SYSTEM CONFIGURATION ========================================= 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Num CPU Cores = 112
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: CPU RAM = 791277772 KB 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: ============================================================================================ 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using LANS
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using PolyWarmUpScheduler with args={'warmup': 0.05, 'total_steps': 200.0, 'degree': 1.0, 'constant': 0.25}
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:15,353] [INFO] [logging.py:68:log_dist] [Rank 0] DeepSpeed info: version=0.7.7+cb9bb22, git-hash=cb9bb22, git-branch=v1.9.0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,180] [INFO] [logging.py:68:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,181] [INFO] [logging.py:68:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,181] [INFO] [logging.py:68:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [logging.py:68:log_dist] [Rank 0] DeepSpeed Basic Optimizer = LANS
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [utils.py:58:is_zero_supported_optimizer] Checking ZeRO support for optimizer=LANS type=<class 'lans.LANS'>
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [WARNING] [engine.py:1209:_do_optimizer_sanity_check] **** You are using ZeRO with an untested optimizer, proceed with caution *****
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [logging.py:68:log_dist] [Rank 0] Creating bf16 ZeRO stage 1 optimizer
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [logging.py:68:log_dist] [Rank 0] Creating bf16 ZeRO stage 1 optimizer
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [stage_1_and_2.py:153:__init__] Reduce bucket size 500,000,000
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [stage_1_and_2.py:154:__init__] Allgather bucket size 500,000,000
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,252] [INFO] [stage_1_and_2.py:155:__init__] CPU Offload: False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:17,253] [INFO] [stage_1_and_2.py:156:__init__] Round robin gradient partitioning: False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Creating extension directory /root/.cache/torch_extensions/py38_cpu/utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Creating extension directory /root/.cache/torch_extensions/py38_cpu/utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Emitting ninja build file /root/.cache/torch_extensions/py38_cpu/utils/build.ninja...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Building extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Emitting ninja build file /root/.cache/torch_extensions/py38_cpu/utils/build.ninja...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Building extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [1/2] c++ -MMD -MF flatten_unflatten.o.d -DTORCH_EXTENSION_NAME=utils -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1013\" -isystem /usr/local/lib/python3.8/dist-packages/torch/include -isystem /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -isystem /usr/local/lib/python3.8/dist-packages/torch/include/TH -isystem /usr/local/lib/python3.8/dist-packages/torch/include/THC -isystem /usr/include/python3.8 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++14 -c /usr/local/lib/python3.8/dist-packages/deepspeed/ops/csrc/utils/flatten_unflatten.cpp -o flatten_unflatten.o 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [1/2] c++ -MMD -MF flatten_unflatten.o.d -DTORCH_EXTENSION_NAME=utils -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1013\" -isystem /usr/local/lib/python3.8/dist-packages/torch/include -isystem /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -isystem /usr/local/lib/python3.8/dist-packages/torch/include/TH -isystem /usr/local/lib/python3.8/dist-packages/torch/include/THC -isystem /usr/include/python3.8 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++14 -c /usr/local/lib/python3.8/dist-packages/deepspeed/ops/csrc/utils/flatten_unflatten.cpp -o flatten_unflatten.o 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2/2] c++ flatten_unflatten.o -shared -L/usr/local/lib/python3.8/dist-packages/torch/lib -lc10 -ltorch_cpu -ltorch -ltorch_python -o utils.so
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2/2] c++ flatten_unflatten.o -shared -L/usr/local/lib/python3.8/dist-packages/torch/lib -lc10 -ltorch_cpu -ltorch -ltorch_python -o utils.so
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.816991329193115 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.757003784179688 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.723238229751587 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.719401359558105 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.818368196487427 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.818641662597656 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.8176851272583 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.723551988601685 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 16.819247722625732 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.82102060317993 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.620225191116333 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.82680106163025 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.820308923721313 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.720072507858276 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.82101798057556 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 16.72083044052124 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 1 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 2 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 14 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 13 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 12 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 3 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 7 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 0 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 4 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 15 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 9 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 11 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 6 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 10 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Rank: 5 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Rank: 8 partition count [16, 16] and sizes[(95584400, False), (64910, False)] 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0006661415100097656 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0011246204376220703 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0006976127624511719 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.000644683837890625 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,589] [INFO] [stage_1_and_2.py:614:__init__] optimizer state initialized
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0006165504455566406 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,602] [INFO] [logging.py:68:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,603] [INFO] [logging.py:68:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,603] [INFO] [logging.py:68:log_dist] [Rank 0] DeepSpeed LR Scheduler = <schedulers.PolyWarmUpScheduler object at 0x7f4c31273a90>
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,603] [INFO] [logging.py:68:log_dist] [Rank 0] step=0, skipped=0, lr=[0.00015, 0.00015], mom=[(0.9, 0.999), (0.9, 0.999)]
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,605] [INFO] [config.py:1028:print] DeepSpeedEngine configuration:
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   activation_checkpointing_config  {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "partition_activations": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "contiguous_memory_optimization": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "cpu_checkpointing": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "number_checkpoints": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "synchronize_checkpoint_boundary": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "profile": false
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: }
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   amp_enabled .................. False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   amp_params ................... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   autotuning_config ............ {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "enabled": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "start_step": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "end_step": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "metric_path": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "arg_mappings": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "metric": "throughput", 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "model_info": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "results_dir": "autotuning_results", 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "exps_dir": "autotuning_exps", 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "overwrite": true, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "fast": true, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "start_profile_step": 3, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "end_profile_step": 5, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "tuner_type": "gridsearch", 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "tuner_early_stopping": 5, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "tuner_num_trials": 50, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "model_info_path": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "mp_size": 1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "max_train_batch_size": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "min_train_batch_size": 1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "min_train_micro_batch_size_per_gpu": 1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "num_tuning_micro_batch_sizes": 3
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: }
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   bfloat16_enabled ............. True
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   checkpoint_parallel_write_pipeline  False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   checkpoint_tag_validation_enabled  True
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   checkpoint_tag_validation_fail  False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f498806f850>
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,606] [INFO] [config.py:1032:print]   communication_data_type ...... None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   curriculum_enabled ........... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   curriculum_params ............ False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   dataloader_drop_last ......... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   disable_allgather ............ False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   dump_state ................... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   dynamic_loss_scale_args ...... None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_enabled ........... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_gas_boundary_resolution  1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_layer_name ........ bert.encoder.layer
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_layer_num ......... 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_max_iter .......... 100
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_stability ......... 1e-06
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_tol ............... 0.01
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   eigenvalue_verbose ........... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   elasticity_enabled ........... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   flops_profiler_config ........ {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "enabled": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "profile_step": 1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "module_depth": -1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "top_modules": 1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "detailed": true, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "output_file": null
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: }
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   fp16_auto_cast ............... None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   fp16_enabled ................. False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   fp16_master_weights_and_gradients  False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   global_rank .................. 0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   grad_accum_dtype ............. None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   gradient_accumulation_steps .. 12
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   gradient_clipping ............ 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   gradient_predivide_factor .... 1.0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   initial_dynamic_scale ........ 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   load_universal_checkpoint .... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   loss_scale ................... 1.0
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   memory_breakdown ............. False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   monitor_config ............... <deepspeed.monitor.config.DeepSpeedMonitorConfig object at 0x7f498806f910>
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   nebula_config ................ {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "enabled": false, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "persistent_storage_path": null, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "persistent_time_interval": 100, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "num_of_version_in_retention": 2, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "enable_nebula_load": true, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "load_path": null
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: }
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   optimizer_legacy_fusion ...... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   optimizer_name ............... None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   optimizer_params ............. None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   pld_enabled .................. False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   pld_params ................... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   prescale_gradients ........... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   scheduler_name ............... None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   scheduler_params ............. None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   sparse_attention ............. None
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,607] [INFO] [config.py:1032:print]   sparse_gradients_enabled ..... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   steps_per_print .............. 48
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   train_batch_size ............. 3072
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   train_micro_batch_size_per_gpu  16
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   use_node_local_storage ....... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   wall_clock_breakdown ......... False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   world_size ................... 16
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   zero_allow_comm_data_type_fp32  False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   zero_allow_untested_optimizer  True
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   zero_config .................. stage=1 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=False max_group_size=4000000000 load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   zero_enabled ................. True
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1032:print]   zero_optimization_stage ...... 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,608] [INFO] [config.py:1017:print_user_config]   json = {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "steps_per_print": 48, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "train_batch_size": 3.072000e+03, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "train_micro_batch_size_per_gpu": 16, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "tensorboard": {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:         "enabled": true, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:         "output_path": "./results/bert_1.5b/tensorboard", 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:         "job_name": "bert_1.5b_lans_zero1_bf16"
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     }, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "bf16": {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:         "enabled": true
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     }, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "gradient_clipping": 1, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "zero_optimization": {
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:         "stage": 1
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     }, 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0:     "zero_allow_untested_optimizer": true
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: }
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0006082057952880859 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 15:55:57,609] [INFO] [logging.py:68:log_dist] [Rank 0] Having --resume_from_checkpoint, but no valid checkpoint found. Starting from scratch.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 15:55:57.610222 - PARAMETER SEED : 12439 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 15:55:57.610329 - PARAMETER train_start : True 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 15:55:57.610362 - PARAMETER batch_size_per_pu : 16 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 15:55:57.610387 - PARAMETER learning_rate : 0.0015 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0006206035614013672 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: Time to load utils op: 0.0006341934204101562 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0007240772247314453 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0007367134094238281 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0006709098815917969 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0006921291351318359 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0006499290466308594 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0006198883056640625 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.0006349086761474609 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Using /root/.cache/torch_extensions/py38_cpu as PyTorch extensions root...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: No modifications detected for re-loaded extension module utils, skipping build step...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Loading extension module utils...
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: Time to load utils op: 0.00067901611328125 seconds
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:01:28.347600 - Training Epoch: 0 Training Iteration: 1  average_loss : 11.546874284744263  step_loss : 11.499999046325684  learning_rate : 0.0003  average_training_time_step : 330.7239782810211  average_perf_per_step : 0.5805445404894553 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:01:36.583952 - Training Epoch: 0 Training Iteration: 2  average_loss : 11.489582538604736  step_loss : 11.562499523162842  learning_rate : 0.00044999999999999993  average_training_time_step : 8.233728885650635  average_perf_per_step : 23.318717760383002 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:01:44.527680 - Training Epoch: 0 Training Iteration: 3  average_loss : 11.265624284744263  step_loss : 11.249999284744263  learning_rate : 0.0006  average_training_time_step : 7.943685054779053  average_perf_per_step : 24.17014253158106 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:01:52,375] [INFO] [timer.py:241:stop] 0/48, RunningAvgSamplesPerSec=89.95664122261086, CurrSamplesPerSec=182.22688017568586, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:01:52.515464 - Training Epoch: 0 Training Iteration: 4  average_loss : 10.588541030883789  step_loss : 10.562499046325684  learning_rate : 0.00075  average_training_time_step : 7.990436315536499  average_perf_per_step : 24.0287253934654 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:00.427589 - Training Epoch: 0 Training Iteration: 5  average_loss : 10.645832538604736  step_loss : 11.124999046325684  learning_rate : 0.0008999999999999999  average_training_time_step : 7.913463354110718  average_perf_per_step : 24.262448868264983 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:08.408856 - Training Epoch: 0 Training Iteration: 6  average_loss : 10.031249403953552  step_loss : 9.812499761581421  learning_rate : 0.0010500000000000002  average_training_time_step : 7.977111577987671  average_perf_per_step : 24.068862284666007 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:18.229613 - Training Epoch: 0 Training Iteration: 7  average_loss : 9.802082777023315  step_loss : 9.562499284744263  learning_rate : 0.0012  average_training_time_step : 9.820728778839111  average_perf_per_step : 19.55048391252853 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:02:26,258] [INFO] [timer.py:241:stop] 0/96, RunningAvgSamplesPerSec=160.0101457596716, CurrSamplesPerSec=274.15067512431665, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:26.486322 - Training Epoch: 0 Training Iteration: 8  average_loss : 9.557291150093079  step_loss : 9.187499284744263  learning_rate : 0.0013499999999999999  average_training_time_step : 8.261871099472046  average_perf_per_step : 23.23928777008749 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:35.055540 - Training Epoch: 0 Training Iteration: 9  average_loss : 9.67708283662796  step_loss : 9.624999761581421  learning_rate : 0.0015  average_training_time_step : 8.567241668701172  average_perf_per_step : 22.410947119822286 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:44.304714 - Training Epoch: 0 Training Iteration: 10  average_loss : 9.177082896232605  step_loss : 9.187499284744263  learning_rate : 0.0015  average_training_time_step : 9.250999689102173  average_perf_per_step : 20.754513723114606 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:02:53.453111 - Training Epoch: 0 Training Iteration: 11  average_loss : 9.322916209697723  step_loss : 8.874999761581421  learning_rate : 0.0015  average_training_time_step : 9.145249128341675  average_perf_per_step : 20.99450734534727 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:03:02,878] [INFO] [timer.py:241:stop] 0/144, RunningAvgSamplesPerSec=211.01289096835612, CurrSamplesPerSec=166.34613179361614, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:03.134353 - Training Epoch: 0 Training Iteration: 12  average_loss : 8.999999582767487  step_loss : 8.999999284744263  learning_rate : 0.0015  average_training_time_step : 9.691808700561523  average_perf_per_step : 19.810543721202 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:12.527839 - Training Epoch: 0 Training Iteration: 13  average_loss : 9.135416090488434  step_loss : 8.937499523162842  learning_rate : 0.0015  average_training_time_step : 9.382771015167236  average_perf_per_step : 20.46303801826052 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:21.120951 - Training Epoch: 0 Training Iteration: 14  average_loss : 8.92708283662796  step_loss : 8.999999284744263  learning_rate : 0.0015  average_training_time_step : 8.592037200927734  average_perf_per_step : 22.346271962052096 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:30.513008 - Training Epoch: 0 Training Iteration: 15  average_loss : 8.838541269302368  step_loss : 8.687499761581421  learning_rate : 0.0015  average_training_time_step : 9.392115592956543  average_perf_per_step : 20.44267855306073 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:03:38,916] [INFO] [timer.py:241:stop] 0/192, RunningAvgSamplesPerSec=249.10593236975163, CurrSamplesPerSec=138.31729707844593, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:39.247832 - Training Epoch: 0 Training Iteration: 16  average_loss : 8.874999642372131  step_loss : 8.874999761581421  learning_rate : 0.0015  average_training_time_step : 8.734434127807617  average_perf_per_step : 21.981962104303243 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:49.164587 - Training Epoch: 0 Training Iteration: 17  average_loss : 8.796874582767487  step_loss : 8.687499761581421  learning_rate : 0.0015  average_training_time_step : 9.916022539138794  average_perf_per_step : 19.362602216984794 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:03:57.677006 - Training Epoch: 0 Training Iteration: 18  average_loss : 8.843749463558197  step_loss : 8.874999761581421  learning_rate : 0.0015  average_training_time_step : 8.522011041641235  average_perf_per_step : 22.529893362238962 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:04:07.477044 - Training Epoch: 0 Training Iteration: 19  average_loss : 8.624999523162842  step_loss : 8.499999761581421  learning_rate : 0.0015  average_training_time_step : 9.802248477935791  average_perf_per_step : 19.587342682873143 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:04:18,250] [INFO] [timer.py:241:stop] 0/240, RunningAvgSamplesPerSec=275.86886484978606, CurrSamplesPerSec=69.18170349555984, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:04:18.527851 - Training Epoch: 0 Training Iteration: 20  average_loss : 8.546874582767487  step_loss : 8.812499284744263  learning_rate : 0.0015  average_training_time_step : 11.039639711380005  average_perf_per_step : 17.39187192876235 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:04:28.070560 - Training Epoch: 0 Training Iteration: 21  average_loss : 8.536457896232605  step_loss : 9.062499761581421  learning_rate : 0.0015  average_training_time_step : 9.5447096824646  average_perf_per_step : 20.115855420174757 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:04:38.427554 - Training Epoch: 0 Training Iteration: 22  average_loss : 8.479166150093079  step_loss : 8.374999523162842  learning_rate : 0.0015  average_training_time_step : 10.365784645080566  average_perf_per_step : 18.522476259539125 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:04:47.185202 - Training Epoch: 0 Training Iteration: 23  average_loss : 8.244791269302368  step_loss : 7.999999523162842  learning_rate : 0.0015  average_training_time_step : 8.758490085601807  average_perf_per_step : 21.92158672596219 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:04:55,473] [INFO] [timer.py:241:stop] 0/288, RunningAvgSamplesPerSec=301.2480947178995, CurrSamplesPerSec=162.7404046844737, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:04:55.675533 - Training Epoch: 0 Training Iteration: 24  average_loss : 8.343749523162842  step_loss : 8.249999284744263  learning_rate : 0.0015  average_training_time_step : 8.478189706802368  average_perf_per_step : 22.64634392952439 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:04.988585 - Training Epoch: 0 Training Iteration: 25  average_loss : 8.401041269302368  step_loss : 8.187499523162842  learning_rate : 0.0015  average_training_time_step : 9.314550638198853  average_perf_per_step : 20.612910644622026 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:13.799388 - Training Epoch: 0 Training Iteration: 26  average_loss : 8.296874642372131  step_loss : 8.312499761581421  learning_rate : 0.0015  average_training_time_step : 8.811814308166504  average_perf_per_step : 21.788929417414145 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:23.795498 - Training Epoch: 0 Training Iteration: 27  average_loss : 8.289062082767487  step_loss : 7.999999523162842  learning_rate : 0.0015  average_training_time_step : 9.997253179550171  average_perf_per_step : 19.205275344306035 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:05:32,462] [INFO] [timer.py:241:stop] 0/336, RunningAvgSamplesPerSec=322.626753216263, CurrSamplesPerSec=133.10833656886678, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:33.246614 - Training Epoch: 0 Training Iteration: 28  average_loss : 8.257812023162842  step_loss : 8.374999523162842  learning_rate : 0.0015  average_training_time_step : 9.459067821502686  average_perf_per_step : 20.29798322870028 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:41.844676 - Training Epoch: 0 Training Iteration: 29  average_loss : 8.158853709697723  step_loss : 8.124999761581421  learning_rate : 0.0015  average_training_time_step : 8.589533805847168  average_perf_per_step : 22.352784719154318 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:51.073599 - Training Epoch: 0 Training Iteration: 30  average_loss : 8.091145396232605  step_loss : 8.124999761581421  learning_rate : 0.0015  average_training_time_step : 9.226858854293823  average_perf_per_step : 20.808815115953642 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:05:59.797112 - Training Epoch: 0 Training Iteration: 31  average_loss : 8.187499463558197  step_loss : 7.968749284744263  learning_rate : 0.0015  average_training_time_step : 8.725483655929565  average_perf_per_step : 22.004510875396896 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:06:08,188] [INFO] [timer.py:241:stop] 0/384, RunningAvgSamplesPerSec=343.11561687469145, CurrSamplesPerSec=208.6652713436805, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:06:08.489001 - Training Epoch: 0 Training Iteration: 32  average_loss : 8.117187023162842  step_loss : 7.999999523162842  learning_rate : 0.0015  average_training_time_step : 8.700533390045166  average_perf_per_step : 22.067612569555727 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:06:17.831818 - Training Epoch: 0 Training Iteration: 33  average_loss : 8.13020783662796  step_loss : 7.999999523162842  learning_rate : 0.0015  average_training_time_step : 9.334734916687012  average_perf_per_step : 20.56833983113713 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:06:28.400778 - Training Epoch: 0 Training Iteration: 34  average_loss : 8.190103590488434  step_loss : 8.437499284744263  learning_rate : 0.0015  average_training_time_step : 10.577924728393555  average_perf_per_step : 18.151008343312213 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:06:38.047134 - Training Epoch: 0 Training Iteration: 35  average_loss : 8.148437082767487  step_loss : 8.124999761581421  learning_rate : 0.0015  average_training_time_step : 9.636097192764282  average_perf_per_step : 19.92507922649143 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:06:45,673] [INFO] [timer.py:241:stop] 0/432, RunningAvgSamplesPerSec=360.0069331759986, CurrSamplesPerSec=262.28186446635647, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:06:46.252477 - Training Epoch: 0 Training Iteration: 36  average_loss : 7.963541150093079  step_loss : 7.968749284744263  learning_rate : 0.0015  average_training_time_step : 8.208558082580566  average_perf_per_step : 23.390222505392806 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:06:54.634898 - Training Epoch: 0 Training Iteration: 37  average_loss : 8.122395396232605  step_loss : 7.968749284744263  learning_rate : 0.0015  average_training_time_step : 8.381818532943726  average_perf_per_step : 22.906723552337382 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:07:03.793883 - Training Epoch: 0 Training Iteration: 38  average_loss : 8.05208283662796  step_loss : 8.249999284744263  learning_rate : 0.0015  average_training_time_step : 9.158137321472168  average_perf_per_step : 20.964961897856327 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:07:13.165852 - Training Epoch: 0 Training Iteration: 39  average_loss : 8.013020396232605  step_loss : 7.999999523162842  learning_rate : 0.0015  average_training_time_step : 9.37794017791748  average_perf_per_step : 20.473579097050354 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:07:22,423] [INFO] [timer.py:241:stop] 0/480, RunningAvgSamplesPerSec=371.6818477268454, CurrSamplesPerSec=93.46909376812542, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:07:22.829421 - Training Epoch: 0 Training Iteration: 40  average_loss : 8.010416150093079  step_loss : 8.124999761581421  learning_rate : 0.0015  average_training_time_step : 9.663734436035156  average_perf_per_step : 19.868095638478028 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:07:31.990371 - Training Epoch: 0 Training Iteration: 41  average_loss : 7.976561963558197  step_loss : 7.937499761581421  learning_rate : 0.0015  average_training_time_step : 9.162220239639282  average_perf_per_step : 20.95561937807763 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:07:41.962741 - Training Epoch: 0 Training Iteration: 42  average_loss : 7.992187082767487  step_loss : 8.249999284744263  learning_rate : 0.0015  average_training_time_step : 9.962047338485718  average_perf_per_step : 19.273146721383174 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:07:51.050585 - Training Epoch: 0 Training Iteration: 43  average_loss : 8.065103650093079  step_loss : 7.624999523162842  learning_rate : 0.0015  average_training_time_step : 9.087813138961792  average_perf_per_step : 21.1271949658435 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:07:59,699] [INFO] [timer.py:241:stop] 0/528, RunningAvgSamplesPerSec=380.90872262039113, CurrSamplesPerSec=117.14503926393407, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:00.291905 - Training Epoch: 0 Training Iteration: 44  average_loss : 7.882811963558197  step_loss : 8.249999284744263  learning_rate : 0.0015  average_training_time_step : 9.2430419921875  average_perf_per_step : 20.772382096963774 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:09.247785 - Training Epoch: 0 Training Iteration: 45  average_loss : 8.049478650093079  step_loss : 7.718749523162842  learning_rate : 0.0015  average_training_time_step : 8.955852270126343  average_perf_per_step : 21.438495657241496 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:18.730480 - Training Epoch: 0 Training Iteration: 46  average_loss : 7.950520277023315  step_loss : 7.593749284744263  learning_rate : 0.0015  average_training_time_step : 9.48212194442749  average_perf_per_step : 20.24863222865803 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:30.255303 - Training Epoch: 0 Training Iteration: 47  average_loss : 8.078124582767487  step_loss : 8.374999523162842  learning_rate : 0.0015  average_training_time_step : 11.52411413192749  average_perf_per_step : 16.660716633139298 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:08:37,992] [INFO] [logging.py:68:log_dist] [Rank 0] step=48, skipped=0, lr=[0.0015, 0.0015], mom=[(0.9, 0.999), (0.9, 0.999)]
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:08:37,994] [INFO] [timer.py:241:stop] 0/576, RunningAvgSamplesPerSec=389.3987744964807, CurrSamplesPerSec=232.77224566281575, MemAllocated=5.65GB, MaxMemAllocated=16.94GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:38.279162 - Training Epoch: 0 Training Iteration: 48  average_loss : 8.041666269302368  step_loss : 7.999999523162842  learning_rate : 0.0015  average_training_time_step : 8.024049520492554  average_perf_per_step : 23.92806768074559 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:47.733159 - Training Epoch: 0 Training Iteration: 49  average_loss : 7.997395396232605  step_loss : 8.249999284744263  learning_rate : 0.0015  average_training_time_step : 9.45665955543518  average_perf_per_step : 20.303152384252716 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:08:56.233474 - Training Epoch: 0 Training Iteration: 50  average_loss : 8.044270277023315  step_loss : 7.593749284744263  learning_rate : 0.0015  average_training_time_step : 8.500473022460938  average_perf_per_step : 22.586978335520303 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 2 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 7 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 15 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 14 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 11 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 6 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: best threshold is: 5.9942728216276695s. drop rate: 0.07445549242424243, compute speedup: 0.14192116260528564, speedup: 0.08308740336944044, raw_train_time: 408177.8380870819
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 0 best threshold: 5.9942728216276695rank: 5 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 13 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 12 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 3 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 8 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 10 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 1 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: rank: 9 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: rank: 4 best threshold: 5.9942728216276695
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:07.589610 - Training Epoch: 0 Training Iteration: 51  average_loss : 7.924478709697723  step_loss : 7.624999523162842  learning_rate : 0.0015  average_training_time_step : 11.355591058731079  average_perf_per_step : 16.907970620549527 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:14.398540 - Training Epoch: 0 Training Iteration: 52  average_loss : 7.335937082767487  step_loss : 8.187499523162842  learning_rate : 0.0015  average_training_time_step : 6.817359209060669  average_perf_per_step : 28.16339789530538 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:21.197202 - Training Epoch: 0 Training Iteration: 53  average_loss : 6.747395396232605  step_loss : 7.843749761581421  learning_rate : 0.0015  average_training_time_step : 6.798269987106323  average_perf_per_step : 28.242479390219778 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:27.999371 - Training Epoch: 0 Training Iteration: 54  average_loss : 7.372395396232605  step_loss : 8.15625  learning_rate : 0.0015  average_training_time_step : 6.802597999572754  average_perf_per_step : 28.22451069606918 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:34.772875 - Training Epoch: 0 Training Iteration: 55  average_loss : 7.364582896232605  step_loss : 8.187499523162842  learning_rate : 0.0015  average_training_time_step : 6.773467063903809  average_perf_per_step : 28.345897040406225 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:41.577157 - Training Epoch: 0 Training Iteration: 56  average_loss : 6.664062142372131  step_loss : 7.812499523162842  learning_rate : 0.0015  average_training_time_step : 6.803855657577515  average_perf_per_step : 28.21929353926959 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:09:48,262] [INFO] [timer.py:241:stop] 0/672, RunningAvgSamplesPerSec=412.9866534234839, CurrSamplesPerSec=301.19838570461604, MemAllocated=12.83GB, MaxMemAllocated=22.87GB
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:48.400646 - Training Epoch: 0 Training Iteration: 57  average_loss : 7.3567705154418945  step_loss : 8.15625  learning_rate : 0.0015  average_training_time_step : 6.823427438735962  average_perf_per_step : 28.138351543101916 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:09:55.155550 - Training Epoch: 0 Training Iteration: 58  average_loss : 6.721353709697723  step_loss : 8.062499284744263  learning_rate : 0.0015  average_training_time_step : 6.755185127258301  average_perf_per_step : 28.422611132483684 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:01.828369 - Training Epoch: 0 Training Iteration: 59  average_loss : 7.369791269302368  step_loss : 8.187499523162842  learning_rate : 0.0015  average_training_time_step : 6.671426296234131  average_perf_per_step : 28.779453069635146 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:08.690570 - Training Epoch: 0 Training Iteration: 60  average_loss : 7.343749642372131  step_loss : 7.96875  learning_rate : 0.0014892857142857145  average_training_time_step : 6.863362550735474  average_perf_per_step : 27.974625933089516 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:15.514222 - Training Epoch: 0 Training Iteration: 61  average_loss : 7.3333330154418945  step_loss : 7.96875  learning_rate : 0.0014785714285714285  average_training_time_step : 6.823972702026367  average_perf_per_step : 28.13610317388666 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:22.328946 - Training Epoch: 0 Training Iteration: 62  average_loss : 7.369791150093079  step_loss : 8.062499284744263  learning_rate : 0.0014678571428571431  average_training_time_step : 6.814741373062134  average_perf_per_step : 28.174216670782737 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:29.132391 - Training Epoch: 0 Training Iteration: 63  average_loss : 7.295572519302368  step_loss : 7.828125  learning_rate : 0.0014571428571428572  average_training_time_step : 6.803413391113281  average_perf_per_step : 28.221127978316478 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:35.867865 - Training Epoch: 0 Training Iteration: 64  average_loss : 7.200520396232605  step_loss : 7.718749523162842  learning_rate : 0.0014464285714285716  average_training_time_step : 6.735420227050781  average_perf_per_step : 28.506016481182566 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:42.651461 - Training Epoch: 0 Training Iteration: 65  average_loss : 7.26302045583725  step_loss : 7.374999761581421  learning_rate : 0.0014357142857142856  average_training_time_step : 6.783653974533081  average_perf_per_step : 28.303330435307966 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:49.345974 - Training Epoch: 0 Training Iteration: 66  average_loss : 6.705728769302368  step_loss : 8.15625  learning_rate : 0.001425  average_training_time_step : 6.694635391235352  average_perf_per_step : 28.679679889866343 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:10:56.287509 - Training Epoch: 0 Training Iteration: 67  average_loss : 7.273437082767487  step_loss : 7.562499761581421  learning_rate : 0.0014142857142857143  average_training_time_step : 6.93825364112854  average_perf_per_step : 27.672669511800997 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:03.006187 - Training Epoch: 0 Training Iteration: 68  average_loss : 7.395832896232605  step_loss : 7.874999284744263  learning_rate : 0.0014035714285714287  average_training_time_step : 6.721883296966553  average_perf_per_step : 28.56342359984822 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:09.966856 - Training Epoch: 0 Training Iteration: 69  average_loss : 7.463541269302368  step_loss : 8.34375  learning_rate : 0.0013928571428571432  average_training_time_step : 6.960678577423096  average_perf_per_step : 27.583517593062037 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:16.766980 - Training Epoch: 0 Training Iteration: 70  average_loss : 6.683593451976776  step_loss : 8.203125  learning_rate : 0.0013821428571428572  average_training_time_step : 6.798309087753296  average_perf_per_step : 28.24231695288396 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:23.660090 - Training Epoch: 0 Training Iteration: 71  average_loss : 6.70052045583725  step_loss : 7.96875  learning_rate : 0.0013714285714285716  average_training_time_step : 6.894914865493774  average_perf_per_step : 27.84660923964143 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:30.372186 - Training Epoch: 0 Training Iteration: 72  average_loss : 7.273437082767487  step_loss : 7.562499761581421  learning_rate : 0.0013607142857142858  average_training_time_step : 6.712189435958862  average_perf_per_step : 28.604675394202733 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:37.179195 - Training Epoch: 0 Training Iteration: 73  average_loss : 6.695312201976776  step_loss : 8.187499523162842  learning_rate : 0.00135  average_training_time_step : 6.8067944049835205  average_perf_per_step : 28.207110216143636 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:44.054305 - Training Epoch: 0 Training Iteration: 74  average_loss : 7.471353709697723  step_loss : 8.437499284744263  learning_rate : 0.0013392857142857143  average_training_time_step : 6.875062704086304  average_perf_per_step : 27.927018016269397 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:50.849434 - Training Epoch: 0 Training Iteration: 75  average_loss : 6.630207896232605  step_loss : 8.25  learning_rate : 0.0013285714285714287  average_training_time_step : 6.795358419418335  average_perf_per_step : 28.25458028105524 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:11:57.515886 - Training Epoch: 0 Training Iteration: 76  average_loss : 7.364582896232605  step_loss : 8.187499523162842  learning_rate : 0.001317857142857143  average_training_time_step : 6.662087917327881  average_perf_per_step : 28.8197937917652 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:04.296134 - Training Epoch: 0 Training Iteration: 77  average_loss : 7.3411455154418945  step_loss : 7.812499523162842  learning_rate : 0.0013071428571428572  average_training_time_step : 6.784454822540283  average_perf_per_step : 28.299989464460758 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:11.071244 - Training Epoch: 0 Training Iteration: 78  average_loss : 7.424478769302368  step_loss : 7.875  learning_rate : 0.0012964285714285714  average_training_time_step : 6.774969100952148  average_perf_per_step : 28.339612644582612 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:17.930850 - Training Epoch: 0 Training Iteration: 79  average_loss : 7.48958283662796  step_loss : 7.781249284744263  learning_rate : 0.0012857142857142859  average_training_time_step : 6.851327180862427  average_perf_per_step : 28.02376750249308 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:24.620765 - Training Epoch: 0 Training Iteration: 80  average_loss : 6.6380205154418945  step_loss : 8.124999761581421  learning_rate : 0.001275  average_training_time_step : 6.698272466659546  average_perf_per_step : 28.664107194157054 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:31.598053 - Training Epoch: 0 Training Iteration: 81  average_loss : 7.45052033662796  step_loss : 8.062499284744263  learning_rate : 0.0012642857142857145  average_training_time_step : 6.9769446849823  average_perf_per_step : 27.519209147992132 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:38.459404 - Training Epoch: 0 Training Iteration: 82  average_loss : 7.213541328907013  step_loss : 7.468749761581421  learning_rate : 0.0012535714285714285  average_training_time_step : 6.861417770385742  average_perf_per_step : 27.98255497991721 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:45.267739 - Training Epoch: 0 Training Iteration: 83  average_loss : 7.398437082767487  step_loss : 8.312499761581421  learning_rate : 0.0012428571428571432  average_training_time_step : 6.808722496032715  average_perf_per_step : 28.199122539048105 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:52.085703 - Training Epoch: 0 Training Iteration: 84  average_loss : 6.815103769302368  step_loss : 8.34375  learning_rate : 0.0012321428571428572  average_training_time_step : 6.816640853881836  average_perf_per_step : 28.166365826749225 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:12:58.944220 - Training Epoch: 0 Training Iteration: 85  average_loss : 6.648437201976776  step_loss : 7.875  learning_rate : 0.0012214285714285717  average_training_time_step : 6.859522581100464  average_perf_per_step : 27.990286164958977 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:05.814599 - Training Epoch: 0 Training Iteration: 86  average_loss : 7.23177045583725  step_loss : 7.812499523162842  learning_rate : 0.0012107142857142857  average_training_time_step : 6.870776176452637  average_perf_per_step : 27.944441074651493 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:12.627789 - Training Epoch: 0 Training Iteration: 87  average_loss : 7.093749582767487  step_loss : 8.437499284744263  learning_rate : 0.0012000000000000003  average_training_time_step : 6.813075542449951  average_perf_per_step : 28.181105405879247 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:19.424238 - Training Epoch: 0 Training Iteration: 88  average_loss : 6.67708283662796  step_loss : 8.062499284744263  learning_rate : 0.0011892857142857143  average_training_time_step : 6.794341564178467  average_perf_per_step : 28.25880892009814 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:26.252896 - Training Epoch: 0 Training Iteration: 89  average_loss : 5.928385078907013  step_loss : 7.828125  learning_rate : 0.0011785714285714288  average_training_time_step : 6.822605848312378  average_perf_per_step : 28.141740013823696 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:33.007836 - Training Epoch: 0 Training Iteration: 90  average_loss : 6.703124701976776  step_loss : 7.937499761581421  learning_rate : 0.0011678571428571428  average_training_time_step : 6.758820056915283  average_perf_per_step : 28.407325299858414 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:39.849570 - Training Epoch: 0 Training Iteration: 91  average_loss : 7.252603709697723  step_loss : 7.999999523162842  learning_rate : 0.0011571428571428575  average_training_time_step : 6.8457252979278564  average_perf_per_step : 28.046699457560294 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:46.895682 - Training Epoch: 0 Training Iteration: 92  average_loss : 7.31770795583725  step_loss : 8.0625  learning_rate : 0.0011464285714285715  average_training_time_step : 7.0456531047821045  average_perf_per_step : 27.250844903176343 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:13:53.792214 - Training Epoch: 0 Training Iteration: 93  average_loss : 7.802083075046539  step_loss : 9.5625  learning_rate : 0.001135714285714286  average_training_time_step : 6.896564483642578  average_perf_per_step : 27.839948492526936 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:00.530002 - Training Epoch: 0 Training Iteration: 94  average_loss : 7.932291090488434  step_loss : 8.749999523162842  learning_rate : 0.0011250000000000001  average_training_time_step : 6.7385523319244385  average_perf_per_step : 28.492766775793136 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:07.307279 - Training Epoch: 0 Training Iteration: 95  average_loss : 5.371093511581421  step_loss : 8.015625  learning_rate : 0.0011142857142857144  average_training_time_step : 6.777280330657959  average_perf_per_step : 28.32994809606172 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:14:14,115] [INFO] [logging.py:68:log_dist] [Rank 0] step=96, skipped=0, lr=[0.0011035714285714286, 0.0011035714285714286], mom=[(0.9, 0.999), (0.9, 0.999)]
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:14.252945 - Training Epoch: 0 Training Iteration: 96  average_loss : 6.56770795583725  step_loss : 7.96875  learning_rate : 0.0011035714285714286  average_training_time_step : 6.937977075576782  average_perf_per_step : 27.67377261534671 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:21.042455 - Training Epoch: 0 Training Iteration: 97  average_loss : 7.26302033662796  step_loss : 7.875  learning_rate : 0.001092857142857143  average_training_time_step : 6.786908864974976  average_perf_per_step : 28.28975662114006 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:27.935367 - Training Epoch: 0 Training Iteration: 98  average_loss : 7.335937023162842  step_loss : 8.25  learning_rate : 0.0010821428571428573  average_training_time_step : 6.902708530426025  average_perf_per_step : 27.81516837248668 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:34.738030 - Training Epoch: 0 Training Iteration: 99  average_loss : 7.393228709697723  step_loss : 7.874999284744263  learning_rate : 0.0010714285714285715  average_training_time_step : 6.8032917976379395  average_perf_per_step : 28.2216323672404 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:41.598683 - Training Epoch: 0 Training Iteration: 100  average_loss : 7.236978769302368  step_loss : 7.5  learning_rate : 0.0010607142857142857  average_training_time_step : 6.860541343688965  average_perf_per_step : 27.986129720888783 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:48.384494 - Training Epoch: 0 Training Iteration: 101  average_loss : 5.940103769302368  step_loss : 8.062499284744263  learning_rate : 0.0010500000000000002  average_training_time_step : 6.782526016235352  average_perf_per_step : 28.308037380234012 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:14:55.151218 - Training Epoch: 0 Training Iteration: 102  average_loss : 7.257811963558197  step_loss : 7.687499284744263  learning_rate : 0.0010392857142857144  average_training_time_step : 6.766728162765503  average_perf_per_step : 28.374126369741926 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:02.003831 - Training Epoch: 0 Training Iteration: 103  average_loss : 7.384114146232605  step_loss : 7.828125  learning_rate : 0.0010285714285714286  average_training_time_step : 6.853386878967285  average_perf_per_step : 28.015345316231713 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:08.923003 - Training Epoch: 0 Training Iteration: 104  average_loss : 6.499999582767487  step_loss : 7.749999761581421  learning_rate : 0.0010178571428571428  average_training_time_step : 6.918750047683716  average_perf_per_step : 27.75067731551864 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:15.668413 - Training Epoch: 0 Training Iteration: 105  average_loss : 5.278645575046539  step_loss : 7.718749523162842  learning_rate : 0.0010071428571428573  average_training_time_step : 6.748363256454468  average_perf_per_step : 28.451343341122268 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:22.430252 - Training Epoch: 0 Training Iteration: 106  average_loss : 7.135416209697723  step_loss : 7.687499284744263  learning_rate : 0.0009964285714285715  average_training_time_step : 6.759310245513916  average_perf_per_step : 28.40526518625601 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:29.340163 - Training Epoch: 0 Training Iteration: 107  average_loss : 7.210937082767487  step_loss : 7.843749761581421  learning_rate : 0.0009857142857142857  average_training_time_step : 6.912103652954102  average_perf_per_step : 27.777361226049155 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:36.191595 - Training Epoch: 0 Training Iteration: 108  average_loss : 6.671874582767487  step_loss : 7.78125  learning_rate : 0.0009750000000000001  average_training_time_step : 6.850590467453003  average_perf_per_step : 28.026781182175107 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:43.043736 - Training Epoch: 0 Training Iteration: 109  average_loss : 7.24739533662796  step_loss : 7.906249523162842  learning_rate : 0.0009642857142857142  average_training_time_step : 6.852885007858276  average_perf_per_step : 28.017397020354426 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:49.740402 - Training Epoch: 0 Training Iteration: 110  average_loss : 7.27473920583725  step_loss : 8.203125  learning_rate : 0.0009535714285714285  average_training_time_step : 6.69707465171814  average_perf_per_step : 28.66923395437174 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:15:56.614716 - Training Epoch: 0 Training Iteration: 111  average_loss : 7.329426646232605  step_loss : 8.015625  learning_rate : 0.0009428571428571429  average_training_time_step : 6.864826440811157  average_perf_per_step : 27.968660483325056 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:03.411854 - Training Epoch: 0 Training Iteration: 112  average_loss : 6.587239146232605  step_loss : 7.921875  learning_rate : 0.0009321428571428573  average_training_time_step : 6.806612968444824  average_perf_per_step : 28.207862102649887 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:10.157757 - Training Epoch: 0 Training Iteration: 113  average_loss : 7.385416150093079  step_loss : 8.249999284744263  learning_rate : 0.0009214285714285716  average_training_time_step : 6.745372295379639  average_perf_per_step : 28.4639589324838 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:16.869355 - Training Epoch: 0 Training Iteration: 114  average_loss : 7.390624642372131  step_loss : 7.937499761581421  learning_rate : 0.0009107142857142859  average_training_time_step : 6.71181321144104  average_perf_per_step : 28.606278802978967 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:23.702497 - Training Epoch: 0 Training Iteration: 115  average_loss : 7.36458295583725  step_loss : 7.937499761581421  learning_rate : 0.0009000000000000002  average_training_time_step : 6.831967353820801  average_perf_per_step : 28.103178785335288 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:30.495808 - Training Epoch: 0 Training Iteration: 116  average_loss : 7.377603650093079  step_loss : 8.187499523162842  learning_rate : 0.0008892857142857145  average_training_time_step : 6.7947633266448975  average_perf_per_step : 28.25705484797295 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:37.397661 - Training Epoch: 0 Training Iteration: 117  average_loss : 7.27864533662796  step_loss : 8.249999284744263  learning_rate : 0.0008785714285714286  average_training_time_step : 6.898521423339844  average_perf_per_step : 27.832050988550137 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:44.224458 - Training Epoch: 0 Training Iteration: 118  average_loss : 7.3411455154418945  step_loss : 8.124999761581421  learning_rate : 0.000867857142857143  average_training_time_step : 6.828707456588745  average_perf_per_step : 28.116594717313145 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:50.998447 - Training Epoch: 0 Training Iteration: 119  average_loss : 6.6341142654418945  step_loss : 7.734375  learning_rate : 0.0008571428571428573  average_training_time_step : 6.775391578674316  average_perf_per_step : 28.337845535647553 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:16:57.771030 - Training Epoch: 0 Training Iteration: 120  average_loss : 6.6067705154418945  step_loss : 7.999999523162842  learning_rate : 0.0008464285714285717  average_training_time_step : 6.770459890365601  average_perf_per_step : 28.3584871794628 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:04.514944 - Training Epoch: 0 Training Iteration: 121  average_loss : 7.264322578907013  step_loss : 7.828125  learning_rate : 0.0008357142857142858  average_training_time_step : 6.746032238006592  average_perf_per_step : 28.461174394970687 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:11.323534 - Training Epoch: 0 Training Iteration: 122  average_loss : 7.369791269302368  step_loss : 8.499999761581421  learning_rate : 0.0008250000000000001  average_training_time_step : 6.808183193206787  average_perf_per_step : 28.20135630186594 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:18.130112 - Training Epoch: 0 Training Iteration: 123  average_loss : 7.320312142372131  step_loss : 7.875  learning_rate : 0.0008142857142857144  average_training_time_step : 6.807043552398682  average_perf_per_step : 28.206077796041512 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:24.806425 - Training Epoch: 0 Training Iteration: 124  average_loss : 7.453124642372131  step_loss : 8.124999761581421  learning_rate : 0.0008035714285714286  average_training_time_step : 6.66810941696167  average_perf_per_step : 28.793768667264157 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:31.708394 - Training Epoch: 0 Training Iteration: 125  average_loss : 7.41927045583725  step_loss : 8.124999761581421  learning_rate : 0.0007928571428571429  average_training_time_step : 6.9097740650177  average_perf_per_step : 27.786726192979824 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:38.479111 - Training Epoch: 0 Training Iteration: 126  average_loss : 7.276041209697723  step_loss : 7.718749523162842  learning_rate : 0.0007821428571428572  average_training_time_step : 6.7622339725494385  average_perf_per_step : 28.39298385406411 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:45.320665 - Training Epoch: 0 Training Iteration: 127  average_loss : 6.570312201976776  step_loss : 7.78125  learning_rate : 0.0007714285714285716  average_training_time_step : 6.850353002548218  average_perf_per_step : 28.02775271998088 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:52.155277 - Training Epoch: 0 Training Iteration: 128  average_loss : 7.263020396232605  step_loss : 8.15625  learning_rate : 0.0007607142857142857  average_training_time_step : 6.828475475311279  average_perf_per_step : 28.11754991200984 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:17:58.929042 - Training Epoch: 0 Training Iteration: 129  average_loss : 7.348957896232605  step_loss : 7.937499761581421  learning_rate : 0.00075  average_training_time_step : 6.779562950134277  average_perf_per_step : 28.320409650624633 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:05.631691 - Training Epoch: 0 Training Iteration: 130  average_loss : 7.276041209697723  step_loss : 8.062499284744263  learning_rate : 0.0007392857142857142  average_training_time_step : 6.702932834625244  average_perf_per_step : 28.64417781544645 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:12.409802 - Training Epoch: 0 Training Iteration: 131  average_loss : 7.281249582767487  step_loss : 8.124999761581421  learning_rate : 0.0007285714285714286  average_training_time_step : 6.775654554367065  average_perf_per_step : 28.33674569141834 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:19.218229 - Training Epoch: 0 Training Iteration: 132  average_loss : 7.27864545583725  step_loss : 7.562499761581421  learning_rate : 0.0007178571428571428  average_training_time_step : 6.810678958892822  average_perf_per_step : 28.191021946395264 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:26.050140 - Training Epoch: 0 Training Iteration: 133  average_loss : 7.218749463558197  step_loss : 7.687499284744263  learning_rate : 0.0007071428571428571  average_training_time_step : 6.831611394882202  average_perf_per_step : 28.104643092526295 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:32.916391 - Training Epoch: 0 Training Iteration: 134  average_loss : 5.9895830154418945  step_loss : 8.187499523162842  learning_rate : 0.0006964285714285714  average_training_time_step : 6.864097356796265  average_perf_per_step : 27.971631231293273 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:39.721216 - Training Epoch: 0 Training Iteration: 135  average_loss : 7.302082777023315  step_loss : 8.15625  learning_rate : 0.0006857142857142857  average_training_time_step : 6.807476282119751  average_perf_per_step : 28.20428482495042 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:46.608532 - Training Epoch: 0 Training Iteration: 136  average_loss : 5.197916269302368  step_loss : 7.718749523162842  learning_rate : 0.0006749999999999999  average_training_time_step : 6.8868255615234375  average_perf_per_step : 27.879318023197847 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:18:53.440983 - Training Epoch: 0 Training Iteration: 137  average_loss : 6.59505170583725  step_loss : 7.921875  learning_rate : 0.0006642857142857145  average_training_time_step : 6.8329384326934814  average_perf_per_step : 28.099184836986066 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:00.245178 - Training Epoch: 0 Training Iteration: 138  average_loss : 7.18489545583725  step_loss : 8.374999523162842  learning_rate : 0.0006535714285714288  average_training_time_step : 6.794439792633057  average_perf_per_step : 28.258400377346494 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:07.055778 - Training Epoch: 0 Training Iteration: 139  average_loss : 7.325520396232605  step_loss : 8.124999761581421  learning_rate : 0.000642857142857143  average_training_time_step : 6.820275783538818  average_perf_per_step : 28.15135429910394 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:14.179706 - Training Epoch: 0 Training Iteration: 140  average_loss : 7.234374523162842  step_loss : 7.843749761581421  learning_rate : 0.0006321428571428573  average_training_time_step : 7.1242897510528564  average_perf_per_step : 26.950054912017787 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:20.709606 - Training Epoch: 0 Training Iteration: 141  average_loss : 6.587239146232605  step_loss : 8.015625  learning_rate : 0.0006214285714285716  average_training_time_step : 6.5294811725616455  average_perf_per_step : 29.405092828328744 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:27.486055 - Training Epoch: 0 Training Iteration: 142  average_loss : 7.265624582767487  step_loss : 7.6875  learning_rate : 0.0006107142857142858  average_training_time_step : 6.775909423828125  average_perf_per_step : 28.335679831376417 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:34.281850 - Training Epoch: 0 Training Iteration: 143  average_loss : 6.526041328907013  step_loss : 7.875  learning_rate : 0.0006000000000000002  average_training_time_step : 6.796487808227539  average_perf_per_step : 28.249885149146145 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:19:40,904] [INFO] [logging.py:68:log_dist] [Rank 0] step=144, skipped=0, lr=[0.0005892857142857144, 0.0005892857142857144], mom=[(0.9, 0.999), (0.9, 0.999)]
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:41.048872 - Training Epoch: 0 Training Iteration: 144  average_loss : 7.207030892372131  step_loss : 8.203125  learning_rate : 0.0005892857142857144  average_training_time_step : 6.763981819152832  average_perf_per_step : 28.385646965569077 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:47.878189 - Training Epoch: 0 Training Iteration: 145  average_loss : 7.25520783662796  step_loss : 8.249999284744263  learning_rate : 0.0005785714285714287  average_training_time_step : 6.8324294090271  average_perf_per_step : 28.10127825782246 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:19:54.639853 - Training Epoch: 0 Training Iteration: 146  average_loss : 7.252603828907013  step_loss : 8.15625  learning_rate : 0.000567857142857143  average_training_time_step : 6.761523246765137  average_perf_per_step : 28.395968333297837 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:01.437291 - Training Epoch: 0 Training Iteration: 147  average_loss : 7.234374642372131  step_loss : 7.96875  learning_rate : 0.0005571428571428572  average_training_time_step : 6.787930727005005  average_perf_per_step : 28.285497852261514 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:08.339231 - Training Epoch: 0 Training Iteration: 148  average_loss : 5.843749582767487  step_loss : 7.718749523162842  learning_rate : 0.0005464285714285715  average_training_time_step : 6.911855459213257  average_perf_per_step : 27.77835866692942 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:15.066154 - Training Epoch: 0 Training Iteration: 149  average_loss : 7.117186963558197  step_loss : 7.687499284744263  learning_rate : 0.0005357142857142857  average_training_time_step : 6.726564168930054  average_perf_per_step : 28.543546925018045 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:21.721193 - Training Epoch: 0 Training Iteration: 150  average_loss : 5.937499582767487  step_loss : 7.874999284744263  learning_rate : 0.0005250000000000001  average_training_time_step : 6.654827356338501  average_perf_per_step : 28.851236811895113 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:28.591122 - Training Epoch: 0 Training Iteration: 151  average_loss : 5.229166388511658  step_loss : 7.937499761581421  learning_rate : 0.0005142857142857143  average_training_time_step : 6.869377136230469  average_perf_per_step : 27.950132332574025 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:35.284635 - Training Epoch: 0 Training Iteration: 152  average_loss : 7.328124582767487  step_loss : 8.34375  learning_rate : 0.0005035714285714286  average_training_time_step : 6.692594289779663  average_perf_per_step : 28.68842659313824 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:42.068565 - Training Epoch: 0 Training Iteration: 153  average_loss : 6.6614580154418945  step_loss : 8.0625  learning_rate : 0.0004928571428571429  average_training_time_step : 6.778963565826416  average_perf_per_step : 28.322913692573223 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:48.847941 - Training Epoch: 0 Training Iteration: 154  average_loss : 6.638020396232605  step_loss : 7.812499523162842  learning_rate : 0.0004821428571428571  average_training_time_step : 6.786083459854126  average_perf_per_step : 28.293197561723954 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:20:55.802399 - Training Epoch: 0 Training Iteration: 155  average_loss : 7.242187023162842  step_loss : 7.78125  learning_rate : 0.0004714285714285714  average_training_time_step : 6.9517927169799805  average_perf_per_step : 27.618775158677234 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:02.563625 - Training Epoch: 0 Training Iteration: 156  average_loss : 7.343749523162842  step_loss : 7.781249284744263  learning_rate : 0.00046071428571428565  average_training_time_step : 6.763474941253662  average_perf_per_step : 28.387774282846877 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:09.275746 - Training Epoch: 0 Training Iteration: 157  average_loss : 7.325520396232605  step_loss : 8.124999761581421  learning_rate : 0.00045  average_training_time_step : 6.712558269500732  average_perf_per_step : 28.60310365905853 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:16.106288 - Training Epoch: 0 Training Iteration: 158  average_loss : 6.619791209697723  step_loss : 8.312499761581421  learning_rate : 0.0004392857142857142  average_training_time_step : 6.830366849899292  average_perf_per_step : 28.10976397304793 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:22.988686 - Training Epoch: 0 Training Iteration: 159  average_loss : 7.29817670583725  step_loss : 8.390625  learning_rate : 0.0004285714285714285  average_training_time_step : 6.879494667053223  average_perf_per_step : 27.90902664980794 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:29.752877 - Training Epoch: 0 Training Iteration: 160  average_loss : 7.239582777023315  step_loss : 8.249999284744263  learning_rate : 0.0004178571428571428  average_training_time_step : 6.7641191482543945  average_perf_per_step : 28.38507066356883 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:36.562690 - Training Epoch: 0 Training Iteration: 161  average_loss : 5.937499701976776  step_loss : 7.875  learning_rate : 0.00040714285714285706  average_training_time_step : 6.81264328956604  average_perf_per_step : 28.182893458411243 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:44.414848 - Training Epoch: 0 Training Iteration: 162  average_loss : 6.622395396232605  step_loss : 8.062499284744263  learning_rate : 0.0003964285714285716  average_training_time_step : 7.851847171783447  average_perf_per_step : 24.452844763710505 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:50.992705 - Training Epoch: 0 Training Iteration: 163  average_loss : 7.177082896232605  step_loss : 7.875  learning_rate : 0.00038571428571428584  average_training_time_step : 6.5782811641693115  average_perf_per_step : 29.1869555600312 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:21:57.782432 - Training Epoch: 0 Training Iteration: 164  average_loss : 7.138020396232605  step_loss : 7.437499523162842  learning_rate : 0.0003750000000000001  average_training_time_step : 6.781230688095093  average_perf_per_step : 28.313444687417718 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:04.523187 - Training Epoch: 0 Training Iteration: 165  average_loss : 7.093749523162842  step_loss : 7.624999523162842  learning_rate : 0.0003642857142857144  average_training_time_step : 6.74941086769104  average_perf_per_step : 28.446927259842877 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:11.288704 - Training Epoch: 0 Training Iteration: 166  average_loss : 7.140624523162842  step_loss : 7.343749523162842  learning_rate : 0.0003535714285714287  average_training_time_step : 6.760039806365967  average_perf_per_step : 28.40219961710766 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:18.142162 - Training Epoch: 0 Training Iteration: 167  average_loss : 7.226562082767487  step_loss : 8.187499523162842  learning_rate : 0.00034285714285714296  average_training_time_step : 6.858853816986084  average_perf_per_step : 27.993015323421574 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:24.961557 - Training Epoch: 0 Training Iteration: 168  average_loss : 7.131510078907013  step_loss : 7.453125  learning_rate : 0.00033214285714285724  average_training_time_step : 6.817249536514282  average_perf_per_step : 28.163850974152727 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:31.826094 - Training Epoch: 0 Training Iteration: 169  average_loss : 7.23958283662796  step_loss : 8.124999761581421  learning_rate : 0.0003214285714285715  average_training_time_step : 6.857800722122192  average_perf_per_step : 27.997313975694574 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:38.561224 - Training Epoch: 0 Training Iteration: 170  average_loss : 7.194009959697723  step_loss : 7.734375  learning_rate : 0.0003107142857142858  average_training_time_step : 6.7436840534210205  average_perf_per_step : 28.471084718537465 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:45.245248 - Training Epoch: 0 Training Iteration: 171  average_loss : 6.53645795583725  step_loss : 7.781249284744263  learning_rate : 0.0003000000000000001  average_training_time_step : 6.676989555358887  average_perf_per_step : 28.755474066288254 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:52.068015 - Training Epoch: 0 Training Iteration: 172  average_loss : 7.23177033662796  step_loss : 7.906249523162842  learning_rate : 0.00028928571428571436  average_training_time_step : 6.830229043960571  average_perf_per_step : 28.11033111250791 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:22:58.974657 - Training Epoch: 0 Training Iteration: 173  average_loss : 7.208332896232605  step_loss : 7.999999523162842  learning_rate : 0.0002785714285714286  average_training_time_step : 6.903790235519409  average_perf_per_step : 27.810810214391573 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:05.749655 - Training Epoch: 0 Training Iteration: 174  average_loss : 7.195312023162842  step_loss : 7.781249284744263  learning_rate : 0.00026785714285714287  average_training_time_step : 6.774463891983032  average_perf_per_step : 28.341726085102426 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:12.482934 - Training Epoch: 0 Training Iteration: 175  average_loss : 7.15364533662796  step_loss : 8.062499284744263  learning_rate : 0.00025714285714285715  average_training_time_step : 6.727656602859497  average_perf_per_step : 28.538912036383227 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:19.272449 - Training Epoch: 0 Training Iteration: 176  average_loss : 7.239582896232605  step_loss : 7.999999523162842  learning_rate : 0.00024642857142857143  average_training_time_step : 6.797928810119629  average_perf_per_step : 28.243896834309627 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:26.122261 - Training Epoch: 0 Training Iteration: 177  average_loss : 7.0989580154418945  step_loss : 7.843749761581421  learning_rate : 0.0002357142857142857  average_training_time_step : 6.848553657531738  average_perf_per_step : 28.035116551776863 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:32.882299 - Training Epoch: 0 Training Iteration: 178  average_loss : 6.617187201976776  step_loss : 8.312499761581421  learning_rate : 0.000225  average_training_time_step : 6.761422157287598  average_perf_per_step : 28.396392879130985 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:39.675164 - Training Epoch: 0 Training Iteration: 179  average_loss : 7.158853709697723  step_loss : 8.0625  learning_rate : 0.00021428571428571425  average_training_time_step : 6.791092395782471  average_perf_per_step : 28.27232922338671 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:46.455485 - Training Epoch: 0 Training Iteration: 180  average_loss : 7.299478709697723  step_loss : 8.062499284744263  learning_rate : 0.00020357142857142853  average_training_time_step : 6.773431062698364  average_perf_per_step : 28.3460477006039 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:23:53.333581 - Training Epoch: 0 Training Iteration: 181  average_loss : 7.015624463558197  step_loss : 7.781249284744263  learning_rate : 0.0001928571428571428  average_training_time_step : 6.886995792388916  average_perf_per_step : 27.87862890989226 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:00.111668 - Training Epoch: 0 Training Iteration: 182  average_loss : 7.09895783662796  step_loss : 7.687499284744263  learning_rate : 0.0001821428571428571  average_training_time_step : 6.77686333656311  average_perf_per_step : 28.33169129501332 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:06.975380 - Training Epoch: 0 Training Iteration: 183  average_loss : 7.151041269302368  step_loss : 7.749999761581421  learning_rate : 0.00017142857142857137  average_training_time_step : 6.856146812438965  average_perf_per_step : 28.0040677734115 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:13.817070 - Training Epoch: 0 Training Iteration: 184  average_loss : 6.522134959697723  step_loss : 7.828125  learning_rate : 0.00016071428571428562  average_training_time_step : 6.841082334518433  average_perf_per_step : 28.0657344279011 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:20.568532 - Training Epoch: 0 Training Iteration: 185  average_loss : 7.132812023162842  step_loss : 7.531249523162842  learning_rate : 0.0001499999999999999  average_training_time_step : 6.751250267028809  average_perf_per_step : 28.43917680517245 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:27.360828 - Training Epoch: 0 Training Iteration: 186  average_loss : 7.205728650093079  step_loss : 7.968749284744263  learning_rate : 0.00013928571428571419  average_training_time_step : 6.801452159881592  average_perf_per_step : 28.229265675426376 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:34.188940 - Training Epoch: 0 Training Iteration: 187  average_loss : 7.195312142372131  step_loss : 7.59375  learning_rate : 0.0001285714285714287  average_training_time_step : 6.823134899139404  average_perf_per_step : 28.139557965388722 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:41.070943 - Training Epoch: 0 Training Iteration: 188  average_loss : 5.877603769302368  step_loss : 7.5  learning_rate : 0.00011785714285714298  average_training_time_step : 6.879522323608398  average_perf_per_step : 27.90891445196932 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:47.783342 - Training Epoch: 0 Training Iteration: 189  average_loss : 6.433593451976776  step_loss : 7.640625  learning_rate : 0.00010714285714285725  average_training_time_step : 6.720561981201172  average_perf_per_step : 28.569039395375633 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:24:54.633291 - Training Epoch: 0 Training Iteration: 190  average_loss : 7.062499642372131  step_loss : 8.0625  learning_rate : 9.642857142857153e-05  average_training_time_step : 6.839698076248169  average_perf_per_step : 28.071414536081278 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:01.413795 - Training Epoch: 0 Training Iteration: 191  average_loss : 7.127603709697723  step_loss : 7.687499284744263  learning_rate : 8.57142857142858e-05  average_training_time_step : 6.790663480758667  average_perf_per_step : 28.274114973305874 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:25:08,092] [INFO] [logging.py:68:log_dist] [Rank 0] step=192, skipped=0, lr=[7.500000000000007e-05, 7.500000000000007e-05], mom=[(0.9, 0.999), (0.9, 0.999)]
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:08.226405 - Training Epoch: 0 Training Iteration: 192  average_loss : 6.536457896232605  step_loss : 7.999999523162842  learning_rate : 7.500000000000007e-05  average_training_time_step : 6.812407970428467  average_perf_per_step : 28.18386697235987 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:15.044612 - Training Epoch: 0 Training Iteration: 193  average_loss : 7.221353769302368  step_loss : 7.6875  learning_rate : 6.428571428571436e-05  average_training_time_step : 6.812358856201172  average_perf_per_step : 28.18407016612546 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:21.879897 - Training Epoch: 0 Training Iteration: 194  average_loss : 7.065103650093079  step_loss : 7.624999523162842  learning_rate : 5.357142857142862e-05  average_training_time_step : 6.84009861946106  average_perf_per_step : 28.069770727242517 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:28.608570 - Training Epoch: 0 Training Iteration: 195  average_loss : 7.190103709697723  step_loss : 7.968749284744263  learning_rate : 4.28571428571429e-05  average_training_time_step : 6.729701042175293  average_perf_per_step : 28.530242100908893 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:35.351909 - Training Epoch: 0 Training Iteration: 196  average_loss : 6.506510019302368  step_loss : 7.546875  learning_rate : 3.214285714285718e-05  average_training_time_step : 6.739929676055908  average_perf_per_step : 28.486944111908766 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:42.259973 - Training Epoch: 0 Training Iteration: 197  average_loss : 6.403645575046539  step_loss : 7.5  learning_rate : 2.142857142857145e-05  average_training_time_step : 6.910766363143921  average_perf_per_step : 27.78273637262037 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:49.054227 - Training Epoch: 0 Training Iteration: 198  average_loss : 6.424478828907013  step_loss : 7.6875  learning_rate : 1.0714285714285724e-05  average_training_time_step : 6.794522762298584  average_perf_per_step : 28.258055306749238 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:25:55.774707 - Training Epoch: 0 Training Iteration: 199  average_loss : 7.16145795583725  step_loss : 7.656249761581421  learning_rate : 0.0  average_training_time_step : 6.721200942993164  average_perf_per_step : 28.566323433635702 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:26:02.641193 - Training Epoch: 0 Training Iteration: 200  final_loss : 6.774413585662842  average_training_time_step : 6.8314104080200195  average_perf_per_step : 28.10546995896976 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: DLL 2023-06-12 16:26:02.725457 -  e2e_train_time : 1888.8717210292816  training_sequences_per_second : 428.39489941807886  final_loss : 6.774413585662842  raw_train_time : 1434.1907451152802 
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:08,137] [INFO] [launch.py:354:main] Process 915 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:08,138] [INFO] [launch.py:354:main] Process 912 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:08,138] [INFO] [launch.py:354:main] Process 913 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:08,726] [INFO] [launch.py:354:main] Process 1070 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:08,727] [INFO] [launch.py:354:main] Process 1064 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:08,727] [INFO] [launch.py:354:main] Process 1071 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:08,727] [INFO] [launch.py:354:main] Process 1065 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:08,727] [INFO] [launch.py:354:main] Process 1066 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:08,727] [INFO] [launch.py:354:main] Process 1067 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:09,139] [INFO] [launch.py:354:main] Process 910 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:09,139] [INFO] [launch.py:354:main] Process 916 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:09,139] [INFO] [launch.py:354:main] Process 911 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:09,140] [INFO] [launch.py:354:main] Process 914 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-1: [2023-06-12 16:26:09,140] [INFO] [launch.py:354:main] Process 909 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:09,728] [INFO] [launch.py:354:main] Process 1069 exits successfully.
+tensorflow	sgottlieb-w270-g1-l-tfjob-worker-0: [2023-06-12 16:26:09,729] [INFO] [launch.py:354:main] Process 1068 exits successfully.
+Job completed successfully
+
+Stopping watch
